@@ -1,0 +1,44 @@
+/*CSS Styles go here*/
+
+h1{
+     color: #343CB3;
+}
+
+h2 {
+     color: #DB1B1E;
+}
+
+h3 {
+     color: green;
+}
+
+h4 {
+     color: brown;
+}
+
+header {
+     background-color: #9BFAFA;
+	 text-align: center;
+}	 
+
+body{
+     font-family: sans-serif;Arial;
+	 background-color: #D7FF36;
+}
+
+header a{
+     color:#1307F7;
+}
+
+div#wrapper{
+   margin: 0 auto;
+}   
+
+section, header {
+   padding:12 px;
+   margin: 12 px;
+}
+
+img {
+   border-radius:50px;
+}
