@@ -134,7 +134,7 @@
                         Prove that the midpoint of the segment $AB$ lies on the circumcircle of triangle $ADZ$.
                     </p>
                     <button class="button" onclick="hideandshow(apmo2017q2, apmo2017q2button)" id="apmo2017q2button">Show solution</button>
-                    <div id="apmo2017q2", style="display: none;">
+                    <div id="apmo2017q2", style="display: none; border: 1px solid black;">
                         <p>
                             The internal and external angle bisectors are perpendicular to each other (known fact!!!), so $\angle ZAD$ is $90^{\circ}$.
                             This motivates us to think of the <i>Pythagoras' theorem</i>,
@@ -176,7 +176,7 @@
                         Prove that line $BD$ is tangent to the circumcircle of triangle $TSH$.
                     </p>
                     <button class="button" onclick="hideandshow(imo2014q3, imo2014q3button)" id="imo2014q3button">Show solution</button>
-                    <div id="imo2014q3", style="display: none;">
+                    <div id="imo2014q3", style="display: none; border: 1px solid black;">
                         <p>
                             The goal is to prove that the circumcenter $O$ of $HST$ lies on $AH$ (and the conclusion follows from the fact that $AH$ is perpendicular to $BD$).
                             The first step is to recognize that the fact $\angle CHS - \angle CSB = 90^{\circ}$ implies that the circumcenter $P$ of $\triangle CHS$ lies on line $AB$.
@@ -226,7 +226,7 @@
                         Prove that as $P$ varies, the point $Q$ lies on a fixed circle.
                     </p>
                     <button class="button" onclick="hideandshow(isl2014g4, isl2014g4button)" id="isl2014g4button">Show solution</button>
-                    <div id="isl2014g4", style="display: none;">
+                    <div id="isl2014g4", style="display: none; border: 1px solid black;">
                         <p>
                             So many circles! But two of them pass through $C$ so our intuition tells us to invert around $C$ about some radius $r$.
                             Now let $A', P', M', B', Q'$ be the images after the inversion.
@@ -274,6 +274,60 @@
                             so $\sin\angle RBI=\sin\angle ABI=\sin\angle IBC=\sin\angle IBU$ ($BI$ is the internal angle bisector of $\angle ABC$, don't forget! )
                             Hence $\sin\angle ABV=\sin\angle RBV=\sin\angle UBV=\sin\angle CBV$, and therefore $AV=CV$.
                         </p>
+                        <p>
+                            Let $M$ be the midpoint of arc $AC$ not containing $V$.
+                            Then from $AV=CV$ and $AM=CM$ we have $\angle VCM=\angle VAM=90^{\circ}$. 
+                            Moreover from the property of incenter we hav $MC=MA=MI$. 
+                            Let $N$ be the midpoint of $VC$, then $NV=NC=NI$ since $\angle VCI=90^{\circ}$ and $N$ is the circumcenter of $VCI$.
+                            Hence $NC=NI$, $MC=MI$, $NM$ is the perpendicular bisector of $CI$ and $\angle NIM=\angle NCM=90^{\circ}$. 
+                            Also we have $\angle VBM=90^{\circ}$, so $VB\parallel NI$. 
+                            Since $NI$ passes through the midpoint of $VC$ which is $N$, it passes through the midpoint of $BC$, which is $Z$.
+                            Thus we only need to prove that $NI$ passes through $W$.
+                        </p>
+
+                        <p>
+                            Now comes the <i>exciting</i> trigonometric utilization: ratio hacks!
+                            Let $W'$ be the intersection of $NI$ and $AV$ and we will show that $W'$ is the midpoint of $AX$, which will yield $W=W'$.
+                            Notice that we already had $\angle VIC=\angle VBI=90^{\circ}$,
+                            and also $\angle VCI=90^{\circ}-\angle ICM=90^{\circ}-\angle CIM$
+                            $=90^{\circ}-(180^{\circ}-90^{\circ}-\angle VIB)$
+                            $=\angle VIB$.
+                            With the fact $UX\parallel AI$ we have
+                            $\frac{XA}{VX}=\frac{UI}{VU}=\frac{|\triangle CIB|}{|\triangle CVB|}$
+                            $=\frac{CI\cdot IB\cdot\sin\angle CIB}{VC\cdot VB\cdot\sin\angle CVB}$
+                            $=\frac{CI}{VC}\cdot\frac{IB}{VB}\cdot\frac{\sin\angle CIB}{\sin\angle CVB}$
+                            $=\cos\angle VCI\cdot\cot\angle VIB\cdot\frac{\sin\angle CIM}{\sin (\angle CVI+\angle IVB)}$
+                            $=\cos\angle VCI\cdot\cot\angle VCI\cdot\frac{\sin\angle ICM}{\sin 2\angle CVI}$
+                            $=\cos\angle VCI\cdot\frac{\cos\angle VCI}{\sin\angle VCI}\cdot\frac{\cos\angle VCI}{2\sin\angle CVI\cos\angle CVI}$
+                            $=\cos\angle VCI\cdot\frac{\cos\angle VCI}{\sin\angle VCI}\cdot\frac{\cos\angle VCI}{2\sin\angle VCI\cos\angle VCI}$
+                            $=\frac{\cos^{2}\angle VCI}{2\sin^{2}\angle VCI}$
+                            $=\frac 12\cot ^2\angle VCI$
+                            $=\frac 12\cot ^2\angle CMN$
+                            $=\frac 12(\frac{MC}{CN})^2$
+                            $=\frac 12\left(\frac{MC}{\frac 12 CV}\right)^2$
+                            $=2\left(\frac{MC}{CV}\right)^2$.
+                            On the other hand, $IM=MA$ and the fact that $\angle W'IM=\angle W'AM=90^{\circ}$ suggest that triangles $W'AM$ and $W'IM$ are congruent. 
+                            Hence $\angle WMI=\angle WMA$, and with $\angle NMC=\angle NMI$ we get 
+                            $\angle NMW'$
+                            $=\angle WMI +\angle NMI$
+                            $=\angle WMA+\angle NMC$
+                            $=\frac 12 \angle CMA$
+                            $=\angle CMV$
+                            $=\angle AMV$.
+                            Some calculation gives $\angle CMN=\angle VMW'$, $\angle VMN=\angle AMW'$. 
+                            With the fact $VCM$ and $VAM$ congruent, we know that $MW'$ is the symmedian of triangle $MVA$.
+                            Therefore $\frac{AW'}{W'V}=\left(\frac{MA}{MV}\right)^2=\left(\frac{MC}{MV}\right)^2.$
+                            Notice, also, that our original $W$ is the midpoint of $AX$, so
+                            $\frac{AW}{WV}=\frac{\frac 12 AX}{XV+WX}$
+                            $=\frac{\frac 12 AX}{XV+\frac 12 AX}$
+                            $=\frac{AX}{2XV+AX}$,
+                            but since $\frac{XA}{VX}=2\left(\frac{MC}{CV}\right)^2$ we can simplify $\frac{AX}{2XV+AX}$ into
+                            $\frac{2\left(\frac{MC}{CV}\right)^2}{2XV+XV(2\left(\frac{MC}{CV}\right)^2)}$
+                            $=\frac{MC^2}{MC^2+CV^2}$
+                            $=\frac{MC^2}{MV^2}$,
+                            the last equality by Pytagoras' theorem.
+                            Thus $\frac{AW'}{W'V}=\frac{AW}{WV}$ and therefore $W'=W$. Q.E.D.
+                        </p>
                     </div>
 
                         <p>
@@ -282,7 +336,7 @@
                             Show that the segments $OA, OF, OB, OD, OC, OE$ dissect the triangle $ABC$ into three pairs of triangles that have equal areas.
                         </p>
                         <button class="button" onclick="hideandshow(apmo2013q1, apmo2013q1button)" id="apmo2013q1button">Show solution</button>
-                        <div id="apmo2013q1" , style="display: none;">
+                        <div id="apmo2013q1" , style="display: none; border: 1px solid black;">
                             <p>
                                 The main obstale from the beginning is to determine which three pairs should have the same area;
                                 not anymore when we can calculate their area using trigonometric hacks.
@@ -333,7 +387,7 @@
                             Prove that $D,H,F,G$ are concyclic.
                         </p>
                         <button class="button" onclick="hideandshow(isl2012g2, isl2012g2button)" id="isl2012g2button">Show solution</button>
-                        <div id="isl2012g2" , style="display: none;">
+                        <div id="isl2012g2" , style="display: none; border: 1px solid black;">
                             <p>
                                 We want to prove that $\angle FHD+\angle FGD=180^{\circ}$, or $\angle FED+\angle FGD=180^{\circ}$ since $\angle FHD=\angle FED$.
                                 We also have the fact $\angle DEC=\angle DGC$, so we only need the following equivalent statement by the identity above:
