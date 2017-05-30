@@ -1,0 +1,22 @@
+@keyframes example{
+    0% {background-color:lightblue;}
+    100% {background-color: pink;}
+}
+
+body {
+    background-color: lightblue;
+    font-family: verdana, sans-serif;
+    padding-left:3em;
+    padding-right:3em;
+    padding-bottom: 2em;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+table, th, td{
+    text-align:center;
+    border: 1px solid black;
+    border-collapse:collapse;
+}

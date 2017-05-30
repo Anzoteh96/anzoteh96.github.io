@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Trigonometry</title>
+    <h1 style="text-align:center; background-color:lightblue">Anzo's Mathematics</h1>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+            src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <link rel="stylesheet" href="trigo_style.css" />
+    
+    
+</head>
+<body>
+    <script src="anzo_jsfn.js"></script>
+    <table>
+        <tbody>
+            <tr>
+                <td class="sidebar" width="15%" valign="top">
+                    <div class="sidebox">
+                        <ul>
+                            <li><a href="">IMO journey</a></li>
+                            <li><a href="">Trigonometry</a></li>
+                            <li><a href="JOM 2013.html">JOM 2013</a></li>
+                            <li><a href="">Problems creation</a></li>
+                            <li><a href="">Trainer's Diary</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td width="85%">
+                    <h1>Trigonometry tricks</h1>
+                    <h2>Background Information</h2>
+                    <p>
+                        I discovered the trick of solving geometry problems using trigonometry in November 2011,
+                        when I started my preparation for IMO 2012 training camps.
+                        Due to many algebraic identities associated with geometry,
+                        trigonometry provides us with a hacky way to transform geometry into algebra.
+                        Thanks to trigonometry (combined with many other tools),
+                        my skills in geometry improved from not being able to solve geometry problems in the 'easy' category in IMO (Problems 1 or 4)
+                        to be able to get the 1 <i>gold</i> point on the difficult IMO 2014 Problem 3 (and later complete the solution after the contest).
+                    </p>
+
+                    <h2>High-level concepts</h2>
+                    <p>
+                        Most geometry problems are about proving identities.
+                        Some of them, like determining the ratios between lengths of two lines or areas of two polygons, are more suggestive of using trigonometry.
+                        Others, as seen in the following, can also be transformed into its algebraic/trigonometric equivalent:
+                        <table style="text-align:center; border: 1px solid black; border-collapse:collapse;">
+                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Items to prove</th>
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Trigonometric equivalent</th>
+                            </tr>
+                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Two angles are the equal</th>
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">the sine/cosine of them are equal + they are on the same quadrant</th>
+                            </tr>
+                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Three (or more) lines pass through the same point.</th>
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">The trigonometric version of Ceva's ratio is 1. </th>
+                            </tr>
+                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Three (or more) points lie on the same line.</th>
+                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">The Menelaus' ratio is -1.</th>
+                            </tr>
+                        </table>
+                    </p>
+
+                    <h2>Basics</h2>
+                    <p>
+                        <ul>
+                            <li>
+                                (Sine rule) For any triangle $ABC$, $\frac{AB}{AC}=\frac{\sin\angle ACB}{\sin\angle ABC}.$
+                            </li>
+                            <li>
+                                For a triangle $ABC$, we have $BC^{2}=AB^{2}+CA^{2}-2\cdot AB\cdot CA\cdot\cos\angle BAC$.
+                                <br />
+                                <b>Corollary. </b>$\cos\angle BAC=\frac{AB^{2}+CA^{2}-BC^{2}}{2\cdot AB\cdot CA}.$
+                            </li>
+                            <li>
+                                Let $D$ be a point on $BC$ of $\triangle ABC$. Then $\frac {BD}{DC}=\frac{AB}{AC}\cdot\frac{\sin\angle BAD}{\sin\angle CAD}$.
+                                <br />
+                                <b>Proof: </b>
+                                Now let $|\triangle ABC|$ be the area of $\triangle ABC$. 
+                                Also let the perpendicular from points $D$ to lines $AB$ and $AC$ be $E$ and $F$ respectively.
+                                Then $\frac {BD}{DC}=\frac{|\triangle ABD|}{|\triangle ADC|}=\dfrac{\frac{1}{2}\cdot AB\cdot DE}{\frac{1}{2}\cdot AC\cdot DF}=\frac{AB\cdot (AD\cdot\sin\angle BAD)}{AC\cdot (AD\cdot\sin\angle CAD)}=\frac{AB}{AC}\cdot\frac{\sin\angle BAD}{\sin\angle CAD}.$
+                            </li>
+                            <li>
+                                Let $ABDC$ be a cyclic quadrilateral. Then $\frac {BD}{DC}=\frac{\sin\angle BAD}{\sin\angle CAD}$.
+                                In fact, 
+                                chord length=
+                                diameter of the circle to which the chord belongs $\times$ sine of the angle subtended by the chord on the arc of the circle 
+                                (or angle between the chord and the tangent to the circle at either of the chord's endpoint!)
+                                As long as ratio is concerned, the diameter of the circle is not so relevant in our solution compared to the sines.
+                            </li>
+                            <li>
+                                Let $D$ be in the angle domain of $\angle BAC$ of a triangle $BAC$ and let $AD$ intersect $BC$ at $E$.
+                                Then $\frac{BE}{EC}=\frac{AB}{AC}\cdot\frac{BD}{CD}\cdot\frac{\sin\angle ABD}{\sin\angle ACD}$. 
+                                (See how it is equivalent to the trigo version of Ceva's theorem).
+                                <br />
+                                <b>Corollary 1. </b> Take $D$ as above. Then $\frac{\sin\angle BAD}{\sin\angle CAD}=\frac{BD}{CD}\cdot\frac{\sin\angle ABD}{\sin\angle ACD}.$
+                                <br />
+                                <b>Corollary 2. </b> Let $D$ and $E$ be in the angle domain of $\angle BAC$ of a triangle $BAC$. 
+                                Then $\frac{\sin\angle BAD}{\sin\angle CAD}=\frac{\sin\angle BAE}{\sin\angle CAE}\iff\angle BAD=\angle BAE$ and $\angle CAD=\angle CAE$.
+                                <br />
+                                <b>Corollary 3. </b>Denote $D$ and $E$ the same way as we did in corollary 2. 
+                                Then $A, D, E$ are collinear iff $\frac{BD\cdot\sin\angle ABD}{CD\cdot\sin\angle ACD}=\frac{BE\cdot\sin\angle ABE}{CE\cdot\sin\angle ACE}$.
+                            </li>
+                        </ul>
+                    </p>
+
+                    <h2>Pitfalls and notes</h2>
+                    <p>
+                        Although trigonometric bashing gives a shortcut in converting a problem to its easier equivalent form, it is not <i>everything.</i>
+                        As shown in some examples below, we need some other observations (possibly using other theorems) to turn a geometry problem into its 'ratio-friendly' form.
+                        At other times, trigonometric bashing needs to be combined with other identities in proving even a single auxillary result of a problem.
+                        Thus it is <b>necessary</b> to equip yourself with other geometry knowledge, too.
+                    </p>
+
+                    <h2> Examples </h2>
+                    <p>
+                        Note: since this page is mainly about trigonometry, proofs of auxillary results that does not involve trigonometry are omitted (but quoted diretly),
+                        if they can be eaily verified.
+                        <b>Do not do this in any mathematical contest.</b>
+                    </p>
+                    <p><b> APMO 2017, Problem 2. </b>
+                        Let $ABC$ be a triangle with $AB < AC$. 
+                        Let $D$ be the intersection point of the internal bisector of angle $BAC$ and the circumcircle of $ABC$. 
+                        Let $Z$ be the intersection point of the perpendicular bisector of $AC$ with the external bisector of angle $\angle{BAC}$. 
+                        Prove that the midpoint of the segment $AB$ lies on the circumcircle of triangle $ADZ$.
+                    </p>
+                    <button class="button" onclick="hideandshow(apmo2017q2, apmo2017q2button)" id="apmo2017q2button">Show solution</button>
+                    <div id="apmo2017q2", style="display: none;">
+                        <p>
+                            The internal and external angle bisectors are perpendicular to each other (known fact!!!), so $\angle ZAD$ is $90^{\circ}$.
+                            This motivates us to think of the <i>Pythagoras' theorem</i>,
+                            where $AD^2+AZ^2=DZ^2$.
+                            If we can prove that, given $M$ as the midpoint of $A$ we have $ZM^2+MD^2=AD^2+AZ^2$ then we have $ZM^2+MD^2=DZ^2$,
+                            which gives $\angle ZMD=90^{\circ}$, and $Z, A, M, D$ concyclic, but how?
+                        </p>
+                        <p>
+                            By cosine rule we have $MZ^2=AM^2+AZ^2-2\cdot AM\cdot AZ\cdot\cos\angle MAZ$,
+                            $DM^2=AD^2+AM^2-2\cdot AD\cdot AM\cdot\cos\angle MAD$.
+                            Summing these two up gives $AD^2+AZ^2+2AM^2-2AM(AZ\cdot\cos\angle MAZ+AD\cdot\cos\angle MAD)$.
+                            A little bit of algebra yields that it is enough to prove that $2AM^2-2AM(AZ\cdot\cos\angle MAZ+AD\cdot\cos\angle MAD)$
+                            (you the readers will verify this, not me!).
+                            We claim that $AM-AZ\cdot\cos\angle MAZ-AD\cdot\cos\angle MAD=0$ (which will be enough to prove our hypothesis).
+                            Now, $\cos\angle MAZ=\cos (90^{\circ}+\frac{1}{2}\angle A)=-\sin\frac{1}{2}\angle A$,
+                            and $\cos\angle MAD=\cos\frac{1}{2}\angle A$.
+                            So now we need $AM+AZ\cdot\sin\frac{1}{2}\angle A-AD\cdot\cos\frac{1}{2}\angle A=0$.
+                            Denote $N$ as midpoint of $AC$, then $AN=AZ\cos\angle ZAN=AZ\sin\angle DAC=AZ\cdot\sin\frac{1}{2}\angle A$.
+                            By <i>Ptolemy's theorem, </i> we also have
+                            $BD\cdot AC+AB\cdot DC=BC\cdot AD$.
+                            In view of the fact that $BD=DC$ and $BC=2DC\cos\angle BCD=2DC\cos\angle BAD=2DC\cos\frac 12\angle A$.
+                            This transforms the equality above into:
+                            $CD\cdot (AB+AC)=2DC\cos\frac 12\angle A\cdot AD$, i.e.
+                            $AB+AC=2AD\cos\frac 12\angle A$.
+                            Therefore $AM+AZ\cdot\sin\frac{1}{2}\angle A-AD\cdot\cos\frac{1}{2}\angle A$
+                            $=AM+AN-\frac 12(AB+AC)$
+                            which is obviously zero (midpoints!!!)
+                        </p>
+                    </div>
+                    
+
+                    <p>
+                        <b>IMO 2014, Problem 3. </b>
+                        Convex quadrilateral $ABCD$ has $\angle ABC = \angle CDA = 90^{\circ}$.
+                        Point $H$ is the foot of the perpendicular from $A$ to $BD$.
+                        Points $S$ and $T$ lie on sides $AB$ and $AD$, respectively,
+                        such that $H$ lies inside triangle $SCT$ and
+                        \[ \angle CHS - \angle CSB = 90^{\circ}, \quad \angle THC - \angle DTC = 90^{\circ}. \]
+                        Prove that line $BD$ is tangent to the circumcircle of triangle $TSH$.
+                    </p>
+                    <button class="button" onclick="hideandshow(imo2014q3, imo2014q3button)" id="imo2014q3button">Show solution</button>
+                    <div id="imo2014q3", style="display: none;">
+                        <p>
+                            The goal is to prove that the circumcenter $O$ of $HST$ lies on $AH$ (and the conclusion follows from the fact that $AH$ is perpendicular to $BD$).
+                            The first step is to recognize that the fact $\angle CHS - \angle CSB = 90^{\circ}$ implies that the circumcenter $P$ of $\triangle CHS$ lies on line $AB$.
+                            Similarly, $\angle THC - \angle DTC = 90^{\circ}$ implies that the circumcenter $Q$ of $\triangle CHT$ lies on line $AD$.
+                            Thus $OP$ is the perpendicular bisector of $HS$, and the internal angle bisector of $\angle APH$ (remember that $A,S,P$) are collinear.
+                            Similarly $OQ$ is the internal angle bisector of $\angle AQH$.
+                            Thus by the angle bisector theorem we only need to prove that $\frac {AP}{PH}=\frac {AQ}{QH}$,
+                            or rather $\frac {AP}{AQ}=\frac {HP}{HQ}$. 
+                            (Now you see the reason to use trigonometric ratio method, don't you?)
+                        </p>
+                        <p>
+                            Let $M$ be the midpoint of $CH$ and $H'$ the foot of perpendicular from $C$ to $BD$.
+                            Now $\frac{BH'}{H'D}=\frac{CH'\cot\angle CBD}{CH'\cot\angle CDB}=\frac{\cot (90^{\circ}-\angle DBA)}{\cot (90^{\circ}-\angle BDA)}$
+                            $=\frac{\tan \angle DBA}{\tan\angle BDA}$ $=\frac{\cot\angle BDA}{\cot\angle DBA}$
+                            $=\frac{AH\cot\angle BDA}{AH\cot\angle DBA}$
+                            $=\frac {DH}{BH}$,
+                            showing that $H$ and $H'$ are the reflection of each other in segment $BD$.
+                            Thus the line from $M$ perpendicular to $BD$ will meet $D$ at its midpoint, and therefore $MB=MD$, or $\angle MDB=\angle MBD$.
+                            On the other hand, with $PC=CH$ and $QC=QH$, $PQ$ is the perpendicular bisector of $CH$, so it meets $CH$ at $M$ and is perpendicular to $CH$.
+                            Thus $\angle PMC=\angle PBC=\angle QMC=\angle QDC=90^{\circ}$, and both $CPBM$, $CMDQ$ are cyclic.
+                        </p>
+
+                        <p>
+                            Now we have $\frac {AP}{AQ}=\frac{\sin\angle PQA}{\sin\angle QPA}=\frac{\sin\angle MQA}{\sin\angle MPA}$
+                            $=\frac{\sin\angle MCD}{\sin\angle MCB}$
+                            $=\frac{\sin\angle HCD}{\sin\angle HCB}$;
+                            $\frac {HP}{HQ}=\frac {CP}{CQ}=\frac{\sin\angle CQP}{\sin\angle CPQ}$
+                            $=\frac{\sin\angle CQM}{\sin\angle CPM}$
+                            $=\frac{\sin\angle CDM}{\sin\angle CBM}$,
+                            but by the trigonometric version of Ceva's theorem and the fact that $CH, DM, BM$ concur at $M$ we have
+                            $1=\frac{\sin\angle BCM}{\sin\angle DCM}\cdot\frac{\sin\angle CDM}{\sin\angle MDB}\cdot\frac{\sin\angle MBD}{\sin\angle MBC}$
+                            $=\frac{\sin\angle BCM}{\sin\angle DCM}\cdot\frac{\sin\angle CDM}{\sin\angle MBC}$,
+                            since $\angle MDB=\angle MBD$.
+                            Thus $\frac {AP}{AQ}=\frac{\sin\angle MCD}{\sin\angle MCB}$
+                            $=\frac{\sin\angle CDM}{\sin\angle MBC}$
+                            $=\frac{HP}{HQ}$. Q.E.D.
+                        </p>
+                    </div>
+
+                    
+                    <p>
+                        <b>IMOSL 2014, G4. </b>
+                        Consider a fixed circle $\Gamma$ with three fixed points $A, B,$ and $C$ on it.
+                        Also, let us fix a real number $\lambda \in(0,1)$. 
+                        For a variable point $P \not\in\{A, B, C\}$ on $\Gamma$, let $M$ be the point on the segment $CP$ such that $CM =\lambda\cdot CP$ . 
+                        Let $Q$ be the second point of intersection of the circumcircles of the triangles $AMP$ and $BMC$. 
+                        Prove that as $P$ varies, the point $Q$ lies on a fixed circle.
+                    </p>
+                    <button class="button" onclick="hideandshow(isl2014g4, isl2014g4button)" id="isl2014g4button">Show solution</button>
+                    <div id="isl2014g4", style="display: none;">
+                        <p>
+                            So many circles! But two of them pass through $C$ so our intuition tells us to invert around $C$ about some radius $r$.
+                            Now let $A', P', M', B', Q'$ be the images after the inversion.
+                            Then $A', P', B'$ lie on a circle, and $Q'$ is the second intersection of line $B'M'$ and circle $A'P'M'$.
+                            Thus we have the relation (power of point from $B$) $B'A'\cdot B'P'=B'M'\cdot B'Q'$.
+                            Also the we have $C'P'=\lambda\cdot C'M'$, so $P'M'=\frac{(1-\lambda )}{\lambda }\cdot C'P'$.
+                        </p>
+
+                        <p>
+                            The notion $\lambda$ already suggests some ratio-hacking; inversion simply makes it clearer on our approach.
+                            Recall also the identity $\lambda=\frac{C'P'}{C'M'}=\frac{B'P'\cdot \sin\angle C'B'P'}{B'M'\cdot\sin\angle C'B'M'}$.
+                            Therefore $B'Q'=B'A'\cdot\frac{B'P'}{B'M'}$
+                            $=B'A'\cdot\lambda\frac{\sin\angle C'B'M'}{\sin\angle C'B'P'}$
+                            $=B'A'\cdot\lambda\frac{\sin\angle C'B'M'}{\sin\angle C'B'A'}$
+                            ($B', P', A'$ are collinear).
+                            Since $B'A', \lambda, \sin\angle C'B'A'$ are constant, we can treat $B'Q'$ as product of constant and $\sin\angle C'B'M'$.
+                            This suggests that the locus of $Q'$ is (possibly just an arc of) a circle tangent to $B'C'$, diameter $\frac{B'A'\cdot\lambda}{\sin\angle C'B'A'}$,
+                            and have some intersection with ray $B'A'$.
+                        </p>
+                    </div>
+
+                    <p>
+                        <b>IMOSL 2014, G7. </b>
+                        Let $ABC$ be a triangle with circumcircle $\Omega$ and incentre $I$. 
+                        Let the line passing through $I$ and perpendicular to $CI$ intersect the segment $BC$ and the arc $BC$ (not containing $A$) of $\Omega$ at points $U$ and $V$ , respectively. 
+                        Let the line passing through $U$ and parallel to $AI$ intersect $AV$ at $X$, and let the line passing through $V$ and parallel to $AI$ intersect $AB$ at $Y$ . 
+                        Let $W$ and $Z$ be the midpoints of $AX$ and $BC$, respectively. 
+                        Prove that if the points $I, X,$ and $Y$ are collinear, then the points $I, W ,$ and $Z$ are also collinear.
+                    </p>
+                    <button class="button" onclick="hideandshow(isl2014g7, isl2014g7button)" id="isl2014g7button">Show solution</button>
+                    <div id="isl2014g7" , style="display: none; border: 1px solid black;">
+                        <p>
+                            How can we even find those triangles $ABC$ such that $I, X, Y$ are collinear? 
+                            Don't panic: the abundance of parallel lines should suggest some sort of equal length ratios, 
+                            and trigonometric ratio hacks will therefore serve us right.
+                        </p>
+
+                        <p>
+                            Now let $AB$ and $IV$ intersect at $R$ (possibly at point of infinity: you now see what's coming).
+                            From $VY\parallel UX\parallel AI$ we have 
+                            $\frac{RV}{RI}=\frac{VY}{AI}=\frac{VX}{XA}=\frac{VU}{UI}.$
+                            This means $(R, U; V, I)$ are harmonic points and lines $(BR, BU; BV, BI)$ are harmonic pencils, which gives
+                            $\frac{\sin\angle RBV}{\sin\angle RBI}=\frac{\sin\angle UBV}{\sin\angle IBU}.$
+                            But $\angle RBI$ is either equal or supplemental to $\angle ABI$ (depdning on which side of $AB$ is $R$ located, )
+                            so $\sin\angle RBI=\sin\angle ABI=\sin\angle IBC=\sin\angle IBU$ ($BI$ is the internal angle bisector of $\angle ABC$, don't forget! )
+                            Hence $\sin\angle ABV=\sin\angle RBV=\sin\angle UBV=\sin\angle CBV$, and therefore $AV=CV$.
+                        </p>
+                    </div>
+
+                        <p>
+                            <b>APMO 2013, Problem 1. </b>
+                            Let $ABC$ be an acute triangle with altitudes $AD, BE$ and $CF$, and let $O$ be the center of its circumcircle.
+                            Show that the segments $OA, OF, OB, OD, OC, OE$ dissect the triangle $ABC$ into three pairs of triangles that have equal areas.
+                        </p>
+                        <button class="button" onclick="hideandshow(apmo2013q1, apmo2013q1button)" id="apmo2013q1button">Show solution</button>
+                        <div id="apmo2013q1" , style="display: none;">
+                            <p>
+                                The main obstale from the beginning is to determine which three pairs should have the same area;
+                                not anymore when we can calculate their area using trigonometric hacks.
+                            </p>
+                            <p>
+                                <b>Solution 1. </b>
+                                The first obstacale is to "pair" the six triangles, so calculate each of them.
+                                Let's pick $\triangle BOD$ for now.
+                                As we see $|\triangle BOC|$
+                                $=\frac{1}{2}\cdot BO\cdot OC\cdot\sin\angle BOC$
+                                $=\frac{1}{2}\cdot R^{2}\cdot\sin(2\angle A)$
+                                $=R^{2}\cdot\sin\angle A\cos\angle A.$
+                                Now $|\triangle BOD|=|\triangle BOC|\cdot\frac{BD}{BC}=|\triangle BOC|\cdot\frac{BD}{BD+DC}.$
+                                But $\frac{BD}{DC}=\frac{\sin\angle C\cos\angle B}{\sin\angle B\cos\angle C}$
+                                so $\frac{BD}{BC}=\frac{\sin\angle C\cos\angle B}{\sin\angle C\cos\angle B+\sin\angle B\cos\angle C}$
+                                $=\frac{\sin\angle C\cos\angle B}{\sin\angle A}$
+                                (recall that $\angle B+\angle C$ and $\angle A$ are sumpplementary so the sines of these angles must be the same).
+                                Combining above we must have $|\triangle BOD|$
+                                $=R^{2}\cdot\cos\angle B\cos\angle A\sin\angle C$. Now you can verify that this is the same for $|\triangle AOE|$ (symmetry says it all!).
+                                Repeat the whole process for $\triangle AOB$ and $\triangle AOC$, and summarizing everything above, we will get
+                                $|\triangle COD|=|\triangle AOF|=R^{2}\cdot\cos \angle A\cos\angle C\sin\angle B$
+                                and $|\triangle BOF|=|\triangle COE|=R^{2}\cdot\cos\angle B\cos\angle C\sin\angle A$. $\blacksquare$
+                            </p>
+                            <p>
+                                <b>Solution 2. </b>
+                                Perhaps we have made our pairing conjecture and want to play with ratios (sides and bases).
+                                Let's name our orthocentre $H$ and midpoints of $BC, CA, AB$ as $M_A, M_B, M_C$ respectively.
+                                Observe that $M_A, M_B, M_C$ are also the perpendicular of $O$ to sides $BC, CA, AB$. (Why?)
+                                Now we shall take $\triangle BOD$ and $\triangle AEO$ again,
+                                and $\frac{|\triangle BOD|}{|\triangle AEO|}$
+                                $=\dfrac{\frac{1}{2}\cdot BD\cdot OM_A}{\frac{1}{2}\cdot CE\cdot OM_B}$.
+                                Now $\triangle EHA\sim\triangle DHB$,
+                                so $\frac{BD}{EA}=\frac{HB}{HA}$
+                                $=\frac{\sin\angle DAB}{\sin\angle EBA}$
+                                $=\frac{\cos\angle B}{\cos\angle A}$ while $OM_A=OB\cos BOM_A=R\cos \frac{\angle BOC}{2}=R\cos\angle A$.
+                                In a similar manner $OM_B=R\cos\angle B$.
+                                So $\frac{|\triangle BOD|}{|\triangle AEO|}$
+                                $=\frac{BD\cdot OM_A}{CE\cdot OM_B}$
+                                $=\frac{\cos\angle B}{\cos\angle A}\cdot\frac{R\cos\angle A}{R\cos\angle B}=1.$ $\blacksquare$
+                            </p>
+                        </div>
+
+                        <p>
+                            <b>IMOSL 2012, G2. </b>
+                            Let $ABCD$ be a cyclic quadrilateral whose diagonals $AC$ and $BD$ meet at $E$.
+                            The extensions of the sides $AD$ and $BC$ beyond $A$ and $B$ meet at $F$.
+                            Let $G$ be the point such that $ECGD$ is a parallelogram, and let $H$ be the image of $E$ under reflection in $AD$.
+                            Prove that $D,H,F,G$ are concyclic.
+                        </p>
+                        <button class="button" onclick="hideandshow(isl2012g2, isl2012g2button)" id="isl2012g2button">Show solution</button>
+                        <div id="isl2012g2" , style="display: none;">
+                            <p>
+                                We want to prove that $\angle FHD+\angle FGD=180^{\circ}$, or $\angle FED+\angle FGD=180^{\circ}$ since $\angle FHD=\angle FED$.
+                                We also have the fact $\angle DEC=\angle DGC$, so we only need the following equivalent statement by the identity above:
+                                $\frac{\sin\angle FED}{\sin\angle FEC}=\frac{\sin\angle FGD}{\sin\angle FGC}$.
+                                Now $\frac{FD\cdot DE\cdot\sin\angle FDE}{FC\cdot CE\cdot\sin\angle FCE}$
+                                $=\frac{|\triangle FDE|}{|\triangle FCE|}$
+                                $=\frac{ED\cdot FE\cdot\sin\angle FED}{EC\cdot FE\cdot\sin\angle FEC}$,
+                                so with the fact that $\angle FDE=\angle FCE$ we have
+                                $\frac{\sin\angle FED}{\sin\angle FEC}$
+                                $=frac{FD}{FC}$.
+                                We also have
+                                $\frac{FD\cdot DG\cdot\sin\angle FDG}{FC\cdot CG\cdot\sin\angle FCG}$
+                                $=\frac{|\triangle FDG|}{|\triangle FCG|}$
+                                $=\frac{DG\cdot GF\cdot\sin\angle FGD}{CG\cdot FG\cdot\sin\angle FGC}$,
+                                since $\angle FDG=\angle FDE+\angle EDG=\angle FCE+\angle ECG$
+                                ($\angle EDG=\angle ECG$ because of the parallelogram property),
+                                $\frac{\sin\angle FGD}{\sin\angle FGC}$
+                                $=\frac{FD\cdot DG}{FC\cdot CG}\cdot\frac{CG}{DG}$,
+                                $=\frac{FD}{FC}$.
+                                Hence the two ratios are equal. $\blacksquare$
+                            </p>
+                        </div>
+
+                        <p>
+                            <b>IMOSL 2007, G2. </b>
+                            Given an isosceles triangle $ABC$ with $AB=AC$.
+                            The midpoint of side $BC$ is denoted by $M$.
+                            Let $X$ be a variable point on the shorter arc $MA$ of the circumcircle of triangle $ABM$.
+                            Let $T$ be the point in the angle domain $BMA$, for which $\angle TMX= 90^{\circ}$ and $TX=BX$.
+                            Prove that $\angle MTB-\angle CTM$ does not depend on $X$.
+                        </p>
+                        <button class="button" onclick="hideandshow(isl2007g2, isl2007g2button)" id="isl2007g2button">Show solution</button>
+                        <div id="isl2007g2" , style="display: none;">
+                            <p>
+                                The problem is geometry, but the way we approach it is pure algebra (yes, <i>that</i> hardcore).
+                            </p>
+
+                            <p>
+                                Name $\angle BAM=b$ and $\angle AMX=\angle BMT=x$, assuming $AB=1$,
+                                all chords on the circumcircle of $BAM$ is equal to the sine of angle subtended by that chord.
+                                Therefore $CM=BM=\sin b$, $TX=BX=\sin (90^{\circ}+x)=\cos x$ and $MX=\sin (180^{\circ}-b-(90^{\circ}+x))=\cos (b+x)$.
+                                Now $TM=\sqrt{TX^{2}-MX^{2}}=\sqrt{\cos ^{2}x-\cos ^{2}(b+x)}$
+                                $=\sqrt{-\sin (-b)\sin (b+2x)}=\sqrt{\sin b\sin (b+2x)}$.
+                            </p>
+                            <p>
+                                First of all let's prove that $BT\cdot CT=\sin b\sin (2x)$.
+                                Observe that: $$BT^{2}=BM^{2}+MT^{2}-2BM\cdot MT\cdot\cos\angle BMT
+                                =\sin ^{2} b+\sin b\sin (b+2x)-2\sin b\sqrt{\sin b\sin (b+2x)}\cos x$$
+                                while $$CT^{2}=CM^{2}+MT^{2}-2CM\cdot MT\cdot\cos\angle CMT=\sin ^{2} b+\sin b\sin (b+2x)+2\sin b\sqrt{\sin b\sin (b+2x)}\cos x.$$
+                                Multiplying the two yields
+                                $(\sin ^{2} b+\sin b\sin (b+2x))^{2}-(2\sin b\sqrt{\sin b\sin (b+2x)}\cos x)^{2}$
+                                <br />
+                                $=\sin ^{4} b+\sin ^{2}b\sin ^{2}(b+2x)+2\sin ^{3} b\sin (b+2x)-4\sin^{3} b\sin (b+2x)\cos ^{2}x$
+                                <br />
+                                $=\sin ^{2} b (\sin ^{2} b+\sin ^{2}(b+2x)+2\sin b\sin (b+2x)(1-2\cos ^{2}x))$
+                                <br />
+                                $=\sin ^{2} b (\sin ^{2} b+\sin ^{2}(b+2x)-2\sin b\sin (b+2x)\cos (2x))$
+                                <br />
+                                because $\cos 2x=\cos^{2} x-1$.
+                                Now expand $\sin (b+2x)$, we get $\sin b\cos (2x)+\cos b\sin (2x)$ and
+                                $\sin ^{2}(b+2x)=\sin ^{2}b\cos ^{2}(2x)+\cos ^{2}b\sin ^{2}(2x)$+$2\cos b\sin b\cos (2x)\sin (2x)$. The original expression then becomes
+                                <br />
+                                $\sin^2 {b}(\sin ^{2} b-\sin ^{2}b\cos ^{2}(2x)+\cos^{2}b\sin^{2} (2x))$
+                                <br />
+                                $=\sin^2 {b}(\sin ^{2} b(1-\cos ^{2}(2x))+\cos^{2}b\sin^{2} (2x))$
+                                <br />
+                                $=\sin^2 {b}(\sin ^{2} b\sin ^{2}(2x)+\cos^{2}b\sin^{2} (2x))$
+                                <br />
+                                $=\sin ^{2}b\sin ^{2} (2x)$
+                                <br />
+                                because $\sin ^{2}a+\cos ^{2}a\equiv 1$ for any $a$.
+                            </p>
+
+                            <p>
+                                Now $\cos\angle BTM=\frac{BT^{2}+TM^{2}-BM^{2}}{2\cdot BT\cdot TM}$,
+                                but since $BT^{2}=BM^{2}+MT^{2}-2BM\cdot MT\cdot\cos\angle BMT$
+                                we can write the cosine as $\frac{2TM^{2}-2BM\cdot MT\cos\angle BMT}{2\cdot BT\cdot TM}$
+                                $=\frac{TM-BM\cdot\cos\angle BMT}{BT}$
+                                $=\frac{TM-\sin b\cos x}{BT}.$
+                                Similarly $\cos\angle CTM=\frac{TM+\sin b\cos x}{CT}$.
+                                Therefore $\cos\angle BTM\cdot \cos\angle CTM$
+                                $=\frac{TM^{2}-\sin ^{2}b\cos ^{2}x}{BT\cdot CT}$
+                                $=\frac{\sin b\sin (b+2x)-\sin ^{2}b\cos ^{2}x}{\sin b\sin (2x)}.$
+                                Meanwhile, $\sin\angle BTM=\sin\angle TMB\cdot\frac{BM}{TB}$
+                                $=\frac{\sin b\sin x}{BT}$ and
+                                $\sin\angle CTM=\sin\angle TMC\cdot\frac{CM}{TC}=\frac{\sin b\sin x}{CT}$
+                                so $\sin\angle BTM\cdot\sin\angle CTM=\frac{\sin ^{2}b\sin ^{2}x}{BT\cdot CT}=\frac{\sin ^{2}b\sin ^{2}x}{\sin b\sin (2x)}.$ Therefore
+                                <br />
+                                $\cos (\angle MTB-\angle CTM)$
+                                <br />
+                                $=\cos\angle BTM\cdot \cos\angle CTM+\sin\angle BTM\cdot\sin\angle CTM$
+                                <br />
+                                $=\frac{\sin b\sin (b+2x)-\sin ^{2}b\cos ^{2}x}{\sin b\sin (2x)}+\frac{\sin ^{2}b\sin ^{2}x}{\sin b\sin (2x)}$
+                                <br />
+                                $=\frac{\sin (b+2x)-\sin b\cos ^{2}x+\sin b\sin ^{2}x}{\sin (2x)}$
+                                <br />
+                                $=\frac{\sin b\cos (2x)+\cos b\sin (2x)-\sin b\cos (2x)}{\sin (2x)}$
+                                <br />
+                                $=\cos b.$ Independent of $x$ isn't it? In fact it is now evident that the angle difference is indeed $b$. (phew!) $\blacksquare$
+                            </p>
+                        </div>
+</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

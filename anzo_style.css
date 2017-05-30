@@ -1,0 +1,55 @@
+body{
+    font-family: verdana, sans-serif;
+    padding-left:3em;
+    padding-right:3em;
+    padding-bottom: 2em;
+}
+
+ul#drops li{
+    display: inline;
+    margin-right: -5px;
+}
+
+ /* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+/*content of our dropdown, hidden by default*/
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;/*background color of our dropdowns*/
+    min-width: 160px;
+
+}
+
+/*links inside the dropdown*/
+.dropdown-content a{
+    color:black;
+    padding: 12px 16px;/*padding so that our stuff appears correctly*/
+    text-decoration: none;
+    display: block;/*aligned*/
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1} 

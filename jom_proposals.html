@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My problem proposals</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+            src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <link rel="stylesheet" href="jom_style.css" />
+</head>
+<body>
+    <script src="anzo_jsfn.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <p>Proposing problems are fun. Here are the bucket list of the problems I have proposed for the JOM:</p>
+    
+    <p>
+    <b>JOM 2015, A6. </b>
+        Let $(a_{n})_{n\ge 0}$ and $(b_{n})_{n\ge 0}$ be two sequences with arbitrary real values $a_0, a_1, b_0, b_1$. For $n\ge 1$, let $a_{n+1}, b_{n+1}$ be defined in this way:
+        $$a_{n+1}=\dfrac{b_{n-1}+b_{n}}{2}, b_{n+1}=\dfrac{a_{n-1}+a_{n}}{2}$$
+        Prove that for any constant $c>0$ there exists a positive integer $N$ s.t. for all $n>N$, $|a_{n}-b_{n}|<c$.
+    </p>
+
+    <p><b>JOM 2014, C6. </b>Let $n$ be a positive integer. 
+    At the beginning, two frogs, $A$ and $B$ are at point 0 of a number line. 
+    At each second, they jump to the right and stop after arriving at $n$, following the constraints below:
+    <br />
+    (i) Each of them must jump either 1 or 2 step(s) every second.
+    <br />
+    (ii) Both of them must arrive at $n$ at the same time.
+    <br />
+    (iii) Frog $A$ must never be behind $B$ during the jump.
+    <br />
+    Let $f(n)$ be the number of arrangements of the sequence of jumps for the two frogs. Prove that 
+    $f(n)\ge 2^{n-1}$.</p>
+
+    <p><b>JOM 2014, Problem 5 (G5).</b>
+    Given $\triangle ABC$ with circumcircle $\Gamma$ and circumcentre $O$. 
+    Let $X$ to be a point on $\Gamma$. 
+    Let $XC_1$, $XB_1$ to be feet of perpendiculars from $X$ to lines $AB$ and $AC$. 
+    Let $\omega_C$ to be circle with centre the midpoint of $AB$ and passing through $C_1$ . 
+    Define $\omega_B$ similarly.
+    <br />
+    Prove that $\omega_B$ and $\omega_C$ has a common point on $XO$.</p>
+
+    <p><b>JOM 2014, N11.</b>
+    Prove that for all nonintegers $c$ there exists composite positive integers $a, b$ such that:
+    <br />
+    (i) $a - b = c$.
+    <br />
+    (ii) $\gcd(a, b) = \gcd(a, c) = \gcd(b, c) = 1$.
+    </p>
+
+    <p><b>JOM 2013, A5.</b>
+    Find all polynomials $P\in \mathbb{R}[x]$ such that 
+    $P(x)+P(y)+P(z)=0\Rightarrow x+y+z=0$.
+    </p>
+    <button class="button" onclick="hideandshow(A5, A5button)" id="A5button">Show solution</button>
+    <p id="A5" style="display: none;">
+        <b>Answer. </b> All $P\in\mathbb{R}[x]$ such that $P(x) = ax$ or $P(x) = ax^{2n}Q(x)$ for some $a\neq 0$, $n\ge 0$, and $Q(x)$
+        with no real root.<br />
+        <b> Solution 1</b> (Justin Lim). If $P(x) = 0$ for some $x$, then $3P(x) = 0 \Rightarrow x = 0$. 
+        Suppose $P(0) \neq 0$, then $P$ has no real root, so we're done. 
+        Suppose $P(0) = 0$. If $P$ takes both positive and negative
+        values, then $P$ is surjective on $R$. 
+        Take infinitely many pairs $x,y$ such that $P(x)+P(y) = 0 \Rightarrow x+y =
+        0 \Rightarrow P(x) + P(-x) = 0.$ 
+        It follows that $P(x) + P(-x)\equiv 0$ for all real $x$. For fixed x, choose $z$ such
+        that $P(x) + P(x) + P(z) = 0 \Rightarrow z = -2x \Rightarrow 2P(x) = P(2x)$, which gives $\deg(P) = 1$.<br />
+
+        Suppose $P$ takes only positive values or only negative values. Then clearly $P$ has even multiplicity
+        at 0, so $P(x) = x^{2n}Q(x)$ for some polynomial $Q(x)$ without real roots. 
+        Conversely, it is easy to
+        check that the above polynomials work, since for $P(x) = ax$, $P(x) + P(y) + P(z) = a(x + y + z)$ and
+        $a(x + y + z) = 0 \Leftrightarrow x + y + z=0$.
+        For $P(x) = x^{2n}Q(x)$, clearly $P(x) + P(y) + P(z) \neq 0$ for $x, y, z$
+        with not all of them equal to 0.
+    </p>
+
+<p><b>JOM 2013, Problem 4 (C3). </b></p>
+
+    <p><b>JOM 2013, G2. </b>
+        Let $\omega_1$ and $\omega_2$ be two circles, with centres $O_1$ and $O_2$ respectively,
+        intersecting at $X$ and $Y$. Let a line tangent to both $\omega_1$ and $\omega_2$ at $A$ and $B$, respectively. 
+        Let $E,F$ be points on $O_1O_2$ such that $XE$ is tangent to $\omega_1$ and $YF$ is tangent to $\omega_2$. Let
+        $AE\cap \omega_1=A, C$ and $BF\cap\omega_2=B,D$.<br />
+        Show that line $BO_2$ is tangent to the circumcircle of $\triangle ACD$ and line $AO_2$ is tangent to $\triangle BCD$.
+    </p>
+
+    <button class="button" onclick="hideandshow(G2, G2button)" id="G2button">Show solution</button>
+    <p id="G2" style="display: none;">
+        
+    </p>
+
+    <p><b>JOM 2013, G5. </b>
+        Let $ABCD$ be a convex quadrilateral, with $AD,BC$ intersecting at $F$. Choose lines
+        $\ell_1$, $\ell_2$ such that $\ell_1$ passes through $F$ and is tangent to circle $FAB$, and $\ell_2$ passes through $F$ and is tangent to circle $FCD$.
+        Let $\ell_1, ell_2$ intersect $AC, BD$ at $W, X, Y, Z$. 
+        Prove that $A,B,C,D$ are concyclic if and only if $W,X, Y, Z$ are concyclic.
+    </p>
+
+    <p><b>JOM 2013, N5. </b>Let $p$ be an odd prime such that $2^p+1|p^p+1$. Prove that any prime divisor of $2^p+1$ other than $3$ is greater than $6p$.</p>
+
+    <button class="button" onclick="hideandshow(N5, N5button)" id="N5button">Show solution</button>
+    <div id="N5" style="display: none;">
+        <p>
+            Let $q\neq 3$ be a prime dividing $2p + 1$ and it is clear that $q$ divides $p^p + 1$. 
+            It is also clear that $3|2^p + 1$ (since $p$ is odd) and hence $p^p\equiv -1\pmod{3}$. 
+            So $p\equiv -1\pmod{3}\Rightarrow p^p\equiv -1\pmod{6}$. 
+            Also that $2^p\equiv -1\pmod{q}\Rightarrow 2^{2p}\equiv 1\pmod{q}$. 
+            Let $r$ to be the minimal positive integer such that $2^r\equiv 1\pmod{q}$. 
+            It is clear that $r|2p$, so $r\in\{1, 2, p, 2p\}$. 
+            But $r=1,2$ implies that $q|1$ or $q|3$,
+            which is impossible, and by (1), $r\neq p$, so $r = 2p$. 
+            But since $\phi(q)=q-1$ by Fermat's little theorem,
+            $2p|q-1$, so $\exists k\in\mathbb{N}$ s.t. $q=2kp+1$.
+        </p>
+        <p>
+            We will now show that $k\neq 1, 2$. 
+            We have $q|p^p+1\Rightarrow q|\left(\frac{q-1}{2k}\right)^p+1$
+            $\Rightarrow q|\frac{(q-1)^p+(2k)^p}{(2k)^p}$
+            $\Rightarrow q|-1+(2k)^p$, since $q$ is relatively prime to $2k$.
+            If $k=1$, from $q|1+2^p$ follows $q|2$, which is impossible.
+            If $k=2$, $q=4p+1$, and so $q=4p+1\equiv 4(2)+1\equiv 0\pmod{3}$,
+            contradicting the fact that $q$ is prime. 
+            Hence $k\ge 3$ and $q\ge 6p+1 > 6p$, as desired.
+        </p>
+    </div>
+
+    <p><b>JOM 2013, N6. </b> Find all functions
+    $f:\mathbb{Z}\to\mathbb{Z}$ such that for all prime $p$ the following condition holds:
+    $$p|ab+bc+ca\Leftrightarrow p|f(a)f(b)+f(b)f(c)+f(c)f(a).$$
+    </p>
+    <button class="button" onclick="hideandshow(N6, N6button)" id="N6button">Show solution</button>
+    <div id="N6" style="display: none;">
+        <p>
+            Answer: $f(a)\equiv a$ or $f(a)\equiv -a$.
+        </p>
+    </div>
+
+</body>
+</html>

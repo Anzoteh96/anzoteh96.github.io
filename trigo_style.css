@@ -1,0 +1,17 @@
+body{
+   
+    font-family: verdana, sans-serif;
+    padding-left:0em;
+    padding-right:3em;
+    padding-bottom: 2em;
+}
+
+background-image{
+    opacity:0.1;
+}
+
+.sidebar{
+    background-color: aqua;
+    text-align: left;
+    vertical-align: top;
+}
