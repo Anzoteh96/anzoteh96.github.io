@@ -1,10 +1,17 @@
-
 body{
+   
     font-family: verdana, sans-serif;
     padding-left:3em;
     padding-right:3em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
+
+table, th, td, tr{
+    text-align:center;
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+
 
 ul#drops li{
     display: inline;

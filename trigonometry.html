@@ -2,8 +2,44 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trigonometry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <ul id="drops" style="list-style-type:none">
+        <!--no bullet-->
+        <li>
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn"><i class="fa fa-home fa-2x"></i></a>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Mathematics</button>
+                <div class="dropdown-content">
+                    <a href="imo_journey.html">IMO journey</a>
+                    <a href="trigonometry.html">Trigonometry</a>
+                    <a href="JOM 2013.html">JOM 2013</a>
+                    <a href="jom_proposals.html">Problems creation</a>
+                    <a href="trainer_diary.html">Trainer's diary</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Writings</button>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Codings</button>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Music</button>
+            </div>
+        </li>
+    </ul>
     <h1 style="text-align:center; background-color:lightblue">Anzo's Mathematics</h1>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
@@ -12,30 +48,15 @@
             src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-    <link rel="stylesheet" href="trigo_style.css" />
+    <link rel="stylesheet" href="imo_style.css" />
     
     
 </head>
 <body>
     <div id="line"></div>
     <script src="anzo_jsfn.js"></script>
-    <table>
-        <tbody>
-            <tr>
-                <td class="sidebar" width="15%" valign="top">
-                    <section id="sidebox">
-                        <ul>
-                            <li><a href="">IMO journey</a></li>
-                            <li><a href="Trigonometry.html">Trigonometry</a></li>
-                            <li><a href="JOM 2013.html">JOM 2013</a></li>
-                            <li><a href="jom_proposals.html">Problems creation</a></li>
-                            <li><a href="">Trainer's Diary</a></li>
-                        </ul>
-                    </section>
-                </td>
-                <td width="85%">
-                    <h1>Trigonometry tricks</h1>
-                    <h2>Background Information</h2>
+    <h1>Trigonometry tricks</h1>
+    <h2>Background Information</h2>
                     <p>
                         I discovered the trick of solving geometry problems using trigonometry in November 2011,
                         when I started my preparation for IMO 2012 training camps.
@@ -51,22 +72,23 @@
                         Most geometry problems are about proving identities.
                         Some of them, like determining the ratios between lengths of two lines or areas of two polygons, are more suggestive of using trigonometry.
                         Others, as seen in the following, can also be transformed into its algebraic/trigonometric equivalent:
-                        <table style="text-align:center; border: 1px solid black; border-collapse:collapse;">
-                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Items to prove</th>
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Trigonometric equivalent</th>
+                        <table align="center">
+                            <tr>
+                                <td>Items to prove</td>
+                                <td>Trigonometric equivalent</td>
+                                
                             </tr>
-                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Two angles are the equal</th>
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">the sine/cosine of them are equal + they are on the same quadrant</th>
+                            <tr>
+                                <td>Two angles are the equal</td>
+                                <td>the sine/cosine of them are equal + they are on the same quadrant</td>
                             </tr>
-                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Three (or more) lines pass through the same point.</th>
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">The trigonometric version of Ceva's ratio is 1. </th>
+                            <tr>
+                                <td>Three (or more) lines pass through the same point.</td>
+                                <td>The trigonometric version of Ceva's ratio is 1. </td>
                             </tr>
-                            <tr style="text-align:center; border: 1px solid black; border-collapse:collapse;">
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">Three (or more) points lie on the same line.</th>
-                                <th style="text-align:center; border: 1px solid black; border-collapse:collapse;">The Menelaus' ratio is -1.</th>
+                            <tr>
+                                <td>Three (or more) points lie on the same line.</td>
+                                <td>The Menelaus' ratio is -1.</td>
                             </tr>
                         </table>
                     </p>
@@ -396,6 +418,83 @@
                                 Thus $\frac{AW'}{W'V}=\frac{AW}{WV}$ and therefore $W'=W$. Q.E.D.
                             </p>
                         </div>
+                        
+                    <p>
+                        <b>IMO 2013, Problem 3. </b>
+                        Let the excircle of triangle $ABC$ opposite the vertex $A$ be tangent to the side $BC$ at the point $A_1$. 
+                        Define the points $B_1$ on $CA$ and $C_1$ on $AB$ analogously, using the excircles opposite $B$ and $C$, respectively. 
+                        Suppose that the circumcentre of triangle $A_1B_1C_1$ lies on the circumcircle of triangle $ABC$. 
+                        Prove that triangle $ABC$ is right-angled.
+                    </p>
+                    <button class="button" onclick="hideandshow(imo2013q3, imo2013q3button)" id="imo2013q3button">Show solution</button>
+                    <div class="solution" , id="imo2013q3" style="border: 1px solid black; display: none;">
+                        <p>
+                            A careful construction will first give an intuition that the converse holds (and it does), 
+                            so this should be our starting point.
+                        </p>
+                        <p>
+                            The problem statement implies that triangle $A_1B_1C_1$ is obtuse, 
+                            so w.l.o.g. let angle $A_1$ be obtuse. 
+                            (on the circumcircle $\Rightarrow$ outside triangle $A_1B_1C_1$). 
+                            The circumcenter lies on the perpendicular bisector of $B_1C_1$, 
+                            and this perpendicular bisector intersect the circumcircle of triangle $ABC$ at two points: 
+                            one on the same side as $A_1$ and the other on the different side as $A_1$. 
+                            The former one cannot be a candidate for our circumcenter, so the latter one has to be. 
+                        </p>
+                        <p>
+                            Denote $M$ as the second intersection of the circumcircles of triangles $ABC$ and $AB_1C_1$
+                            (with the exception of the case where the two circles are tangent at $A$, which we note $M=A$). 
+                            We show that $M$ is the desired circumcenter in this sequel. 
+                            By some angle chasing we know that triangles $MB_1C$ and $MC_1B$ are similar. 
+                            By the properties of excircle we also have $B_1C=C_1B$, so these triangles are indeed congruent. 
+                            These means $MB_1=MC_1$ and $M$ lies on the perpendicular bisector of $B_1C_1$. 
+                            With the fact that $M$ is on different side as $A_1$ w.r.t. $B_1C_1$, 
+                            we conclude that $M$ is the circumcenter. 
+                            In addition, $MC=MB$. so $M$ is on the midpoint of arc $BAC$. 
+                        </p>
+                        <p>
+                            The trigo-heavy part has now begun! 
+                            Denote $D$ as the midpoint of $BC$, then 
+                            $MD\perp BC$ and thus $MA_1^2=MD^2+DA_1^2$. 
+                            Also, $MB_1^2=MC^2+CB_1^2-2\cdot MC\cdot CB_1\cdot\cos MCA$. 
+                            Thus from $MA_1=MB_1=MC_1$ we have: 
+                            $$MD^2+DA_1^2=MC^2+CB_1^2-2\cdot MC\cdot CB_1\cdot\cos MCA;$$ 
+                            Now $MC^2=MD^2+DC^2=MD^2+DA_1^2+(DC^2-DA_1^2)$
+                            $=MD^2+DA_1^2+(DC-DA_1)(DC+DA^1)$
+                            $=MD^2+DA_1^2+BA_1\cdot CA_1$, 
+                            the last equality follows from the fact that $D$ is the midpoint of side $BC$. 
+                            Thus we can re-arrange the equation into 
+                            $$0=BA_1\cdot CA_1-2\cdot MC\cdot CB_1\cdot\cos MCA. $$
+                        </p>
+                        <p>
+                            We need an auxillary lemma: $2\cdot MC\cos MCA=AB+AC$. 
+                            Indeed, let $N$ be diametrically opposite $M$ w.r.t. the circumcircle of $ABC$, 
+                            then $N$ is the midpoint of arc $BC$ not containing $A$. 
+                            By Ptolemy's theorem we have: 
+                            $MB\cdot NC+MC\cdot NB=MN\cdot BC$, or
+                            $2MC\cdot NB=MN\cdot BC$ (since $MB=MC, NB=NC$).
+                            Multiplying $\cos MCA$ on both sides we have 
+                            $2MC\cdot\cos MCA\cdot NB=MN\cdot\cos MCA\cdot BC$
+                            $=MN\cdot\cos MNA\cdot BC$
+                            $=NA\cdot BC$, 
+                            since $\angle MAN=90^{\circ}$. 
+                            By Ptolemy's theorem again we have 
+                            $NA\cdot BC=NB\cdot AC+NC\cdot AB=NB\cdot (AB+AC)$. 
+                            Therefore $AB+AC=2\cdot MC\cos MCA$, as claimed. 
+                        </p>
+                        <p>
+                            Thus getting back to the equation we now have: 
+                            $$0=BA_1\cdot CA_1-(AB+AC)\cdot CB_1. $$
+                            By property of excircles we can verify that 
+                            $CB_1=\frac{AB+AC-BC}{2}$, 
+                            $BA_1=\frac{AC+BC-AB}{2}$, 
+                            $CA_1=\frac{AB+BC-AC}{2}$. 
+                            Now $0=\frac{(AC+BC-AB)(AB+BC-AC)}{4}-\frac{(AB+AC)(AB+AC-BC)}{2}$.
+                            It is now easy to verify that the above can be converted into $AB^2+AC^2=BC^2$, 
+                            which means that angle $A$ is a right-angle.
+                        </p>
+                         
+                    </div>
 
                         <p>
                             <b>APMO 2013, Problem 1.* </b>
@@ -585,6 +684,56 @@
                         </div>
 
                         <p>
+                            <b>IMO 2009, Problem 4. </b>
+                            Let $ ABC$ be a triangle with $ AB = AC$ .
+                            The angle bisectors of $ \angle C AB$ and $ \angle AB C$ meet the sides $ B C$ and $ C A$ at $ D$ and $ E$ , respectively.
+                            Let $ K$ be the incentre of triangle $ ADC$.
+                            Suppose that $ \angle B E K = 45^\circ$ .
+                            Find all possible values of $ \angle C AB$ .
+                        </p>
+
+                        <button class="button" onclick="hideandshow(imo2009q4, imo2009q4button)" id="imo2009q4button">Show solution</button>
+                        <div class="solution" , id="imo2009q4" style="border: 1px solid black; display: none;">
+                            <p>
+                                This is among the trickiest geometry problem in the recent IMOs.
+                                Our trigonometric method wouldn't be easy either, but at least it's safe.
+                            </p>
+
+                            <p>
+                                Denote the incenter of $\triangle ABC$ as $I$, then $I$ is the intersection of $AD$ and $CK$.
+                                By angle bisector theorem + identity on triangle area dissection + sine rule we have:
+                                $\frac{\sin\angle ICD}{\sin\angle CID}$
+                                $=\frac{ID}{DC}$
+                                $=\frac{IK}{KC}$
+                                $=\frac{IE\cdot\sin\angle IEK}{CE\sin\angle CEK}$
+                                $=\frac{\sin\angle ECI\sin\angle IEK}{\sin\angle EIC\sin\angle CEK}.$
+                                Denote $\angle ACB=\angle ABC=a$, then by the assumption that $\angle IEK=45^\circ$ we have
+                                $\frac{\sin\frac 12 a}{\cos\frac 12 a}$
+                                $=\frac{\sin\frac 12 a\sin 45^{\circ}}{\sin a\sin (135^\circ - \frac 32 a)}$
+                                $=\frac{\sin\frac 12 a\sin 45^{\circ}}{2\sin\frac12 a\cos\frac 12 a\sin (45^\circ + \frac 32 a)}$.
+                                We can convert this into
+                                $\sin 45^\circ=2\sin\frac 12 a\sin(45^\circ + \frac 32 a)$
+                                $=2\sin\frac 12 a(\sin 45^\circ\cos \frac 32 a+\cos 45^\circ\sin\frac 32 a)$
+                                $=2\sin45^\circ \sin\frac 12 a(\cos \frac 32 a + \sin\frac 32 a)$
+                                so $2\sin\frac 12 a(\cos \frac 32 a + \sin\frac 32 a)=1$.
+                                Using the fact that $\cos(x+y)=\cos x\cos y-\sin x\sin y$
+                                and $\sin (x+y)=\sin x+\cos y+\cos x\sin y$ we have
+                                $2\sin\frac 12 a(\cos \frac 12 a\cos a-\sin \frac 12 a\sin a+\cos\frac 12 a\sin a+\sin\frac 12 a\cos a)=1$,
+                                using the identity that $2\sin\frac 12 a\cos\frac 12 a=\sin a$ and $2\sin ^2 \frac 12 a=1-\cos a$ we have
+                                $\sin a\cos a-(1-\cos a)\sin a+\sin a\sin a+(1-\cos a)\cos a=1$.
+                                Subtracting 1 (or $\sin^2 a+\cos ^2 a$) from both sides we have
+                                $2\sin a\cos a-\sin a-2\cos ^2 a+\cos a=0$,
+                                $(2\cos a -1)(\sin a-\cos a)=0$.
+                                This means $\cos a=\frac 12$ (so $a=60^{\circ}$, $\angle BAC=60^\circ$),
+                                or $\sin a=\cos a\Rightarrow \tan a=1$ (so $a=45^{\circ}$, $\angle BAC=90^{\circ}$).
+                            </p>
+                            <p>
+                                <b>Note: </b> Many contestants lost marks for missing one of the answers, and not verifying that these two answers work.
+                                Verification is less crucial if we approach by algebra as above (since if the equation holds then our answers work) but it's always a good idea.
+                            </p>
+                        </div>
+
+                        <p>
                             <b>IMOSL 2007, G2.* </b>
                             Given an isosceles triangle $ABC$ with $AB=AC$.
                             The midpoint of side $BC$ is denoted by $M$.
@@ -664,10 +813,5 @@
                         </div>
                         <br />
                         *These are cited directly from my notes written for the Malaysian IMO training camp in January 2016.
-</td>
-            </tr>
-        </tbody>
-    </table>
-    
 </body>
 </html>

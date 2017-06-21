@@ -15,3 +15,17 @@ background-image{
     text-align: left;
     vertical-align: top;
 }
+
+.solution{
+    border: 1px solid black;
+    display: none;
+}
+
+#line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background-color: #0066CC;
+}

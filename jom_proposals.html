@@ -2,26 +2,88 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title>My problem proposals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JOM proposals</title>
+    <ul id="drops" style="list-style-type:none">
+        <!--no bullet-->
+        <li>
+            <div class="dropdown">
+                <a href="index.html" class="dropbtn"><i class="fa fa-home fa-2x"></i></a>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Mathematics</button>
+                <div class="dropdown-content">
+                    <a href="imo_journey.html">IMO journey</a>
+                    <a href="trigonometry.html">Trigonometry</a>
+                    <a href="JOM 2013.html">JOM 2013</a>
+                    <a href="jom_proposals.html">Problems creation</a>
+                    <a href="trainer_diary.html">Trainer's diary</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Writings</button>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Codings</button>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Music</button>
+            </div>
+        </li>
+    </ul>
+    <h1 style="text-align:center; background-color:lightblue">
+        Anzo's Mathematics
+    </h1>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
     <script type="text/javascript" async
             src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
     </script>
-    <link rel="stylesheet" href="jom_style.css" />
+    <link rel="stylesheet" href="imo_style.css" />
 </head>
 <body>
     <script src="anzo_jsfn.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-    <p>Proposing problems are fun. Here are the bucket list of the problems I have proposed for the JOM:</p>
+    <p>
+        The idea of hosting a Junior Olympiad of Mathematics for the junior students in the IMO camp ignited my thoughts of creating problems for the junior students. 
+        The first few problems were proposed after IMO 2012, where I got inspiration from problems 4 and 5 in the IMO.
+    </p>
+
+    <p>Below are the 10 problems I proposed for the first three editions of JOM. Have fun solving!</p>
     
     <p>
     <b>JOM 2015, A6. </b>
         Let $(a_{n})_{n\ge 0}$ and $(b_{n})_{n\ge 0}$ be two sequences with arbitrary real values $a_0, a_1, b_0, b_1$. For $n\ge 1$, let $a_{n+1}, b_{n+1}$ be defined in this way:
         $$a_{n+1}=\dfrac{b_{n-1}+b_{n}}{2}, b_{n+1}=\dfrac{a_{n-1}+a_{n}}{2}$$
-        Prove that for any constant $c>0$ there exists a positive integer $N$ s.t. for all $n>N$, $|a_{n}-b_{n}|<c$.
+        Prove that for any constant $c>0$ there exists a positive integer $N$ s.t. for all $n>N$, $|a_{n}-b_{n}|< c$.
+    </p>
+    <button class="button" onclick="hideandshow(A6, A6button)" id="A6button">Show solution</button>
+    <p id="A6" style="border: 1px solid black; display: none;">
+        Let $(c_n)_{n\ge 0}$ be a sequence with $c_n=a_n-b_n$, then 
+        $c_{n+2}=-\frac{c_n+c_{n+1}}{2}$. In the same way
+        we obtain $c_{n+3} = -\frac{c_{n+2}+c_{n+1}}{4}=\frac{c_n-c_{n+1}}{4}$.
+        Now, by triangle inequality $|c_{n+2}|\le \frac 12 (|c_n|+|c_{n+1}|)$
+        and $|c_{n+3}|\le\frac 14 (|c_{n+1}+|c_n|). $
+        Hence, $|c_{n+2}|+|c_{n+3}|\le \frac 34 (|c_n|+|c_{n+1}|)$. 
+        Repeating the step gives $|c_{2n}|+|c_{2n+1}|\le \left(\frac 34\right)^n (|c_0|+|c_1|)$. 
+        We can take $N=2\log _{\frac{3}{4}}\left(\frac{c}{|c_0|+|c_1|}\right)+2$
+        so that for all $n\ge N$, 
+        $|c_n|$
+        $\le |c_n|+|c_{n+1}|$
+        $\le \left(\frac 34\right)^{\frac 12 n} (|c_0|+|c_1|)$
+        $< \left(\frac 34\right)^{\log _{\frac{3}{4}}\left(\frac{c}{|c_0|+|c_1|}\right)} (|c_0|+|c_1|)$
+        $=c$, 
+        as desired. 
     </p>
 
     <p><b>JOM 2014, C6. </b>Let $n$ be a positive integer. 
@@ -36,6 +98,33 @@
     <br />
     Let $f(n)$ be the number of arrangements of the sequence of jumps for the two frogs. Prove that 
     $f(n)\ge 2^{n-1}$.</p>
+    <button class="button" onclick="hideandshow(C6, C6button)" id="C6button">Show solution</button>
+    <div id="C6" style="border: 1px solid black; display: none;">
+        <p>
+            Let $g(n)$ be the number of arrangements of the sequence of jumps that follows the constraint of $f(n)$ except frog $A$ arrives at $n+1$ and $B$ arrives at $n$ simultaneously.
+            The strategy is to induct on both $f(n)$ and $g(n)$ to prove that $f(n), g(n)\ge 2^{n-1}$.
+            Denote $(a_1+a_2+\cdots +a_k, b_1+b_2+\cdots +b_k)$ to be the sequence of jumps by frogs $A$ and $B$ where $a_i, b_i\in\{1, 2\}$. 
+        </p>
+        <p>
+            <i>Base case. </i> $f(1)=1$ because $(1,1)$ is the only sequene. $f(2)=2$ because we have $(2,2), (1+1, 1+1)$. 
+            $g(1)=1$ as we have $(2,1)$ while $g(2)=2$ as we have $(2+1, 1+1)$ and $(1+2, 1+1)$.
+        </p>
+        <p>
+            <i>Inductive step. </i> 
+            Now assume that there is an $n\ge 2$ such that $f(k), g(k)\ge 2^{k-1}$ for all $k=1,2,\cdots ,n$. 
+            In counting $f(n+1)$, we know that the second last position for $A$ and $B$ can be 
+            $(n,n)$, $(n-1, n-1)$ or $(n, n-1)$. This means 
+            $f(n+1)=f(n)+f(n-1)+g(n-1)\ge 2^{n-1}+2^{n-2}+2^{n-2}=2^n.$
+            In counting $g(n+1)$, the last step can be 
+            $(1,1), (2,1), (1,2), (2,2)$ whereby the second last position is 
+            $(n+1, n)$, $(n,n)$, $(n+1, n-1)$, $(n, n-1)$.
+            Thus $g(n+1)\ge g(n)+f(n)+g(n-1)\ge 2^{n-1}+2^{n-1}+2^{n-2}\ge 2^n$. Q.E.D.
+        </p>
+        <p>
+            <b>Proposer's note: </b> equality for $f(n)$ holds iff $n\le 4.$
+        </p>
+
+    </div>
 
     <p><b>JOM 2014, Problem 5 (G5).</b>
     Given $\triangle ABC$ with circumcircle $\Gamma$ and circumcentre $O$. 
@@ -45,101 +134,191 @@
     Define $\omega_B$ similarly.
     <br />
     Prove that $\omega_B$ and $\omega_C$ has a common point on $XO$.</p>
-
-    <p><b>JOM 2014, N11.</b>
-    Prove that for all nonintegers $c$ there exists composite positive integers $a, b$ such that:
-    <br />
-    (i) $a - b = c$.
-    <br />
-    (ii) $\gcd(a, b) = \gcd(a, c) = \gcd(b, c) = 1$.
-    </p>
-
-    <p><b>JOM 2013, A5.</b>
-    Find all polynomials $P\in \mathbb{R}[x]$ such that 
-    $P(x)+P(y)+P(z)=0\Rightarrow x+y+z=0$.
-    </p>
-    <button class="button" onclick="hideandshow(A5, A5button)" id="A5button">Show solution</button>
-    <p id="A5" style="display: none;">
-        <b>Answer. </b> All $P\in\mathbb{R}[x]$ such that $P(x) = ax$ or $P(x) = ax^{2n}Q(x)$ for some $a\neq 0$, $n\ge 0$, and $Q(x)$
-        with no real root.<br />
-        <b> Solution 1</b> (Justin Lim). If $P(x) = 0$ for some $x$, then $3P(x) = 0 \Rightarrow x = 0$. 
-        Suppose $P(0) \neq 0$, then $P$ has no real root, so we're done. 
-        Suppose $P(0) = 0$. If $P$ takes both positive and negative
-        values, then $P$ is surjective on $R$. 
-        Take infinitely many pairs $x,y$ such that $P(x)+P(y) = 0 \Rightarrow x+y =
-        0 \Rightarrow P(x) + P(-x) = 0.$ 
-        It follows that $P(x) + P(-x)\equiv 0$ for all real $x$. For fixed x, choose $z$ such
-        that $P(x) + P(x) + P(z) = 0 \Rightarrow z = -2x \Rightarrow 2P(x) = P(2x)$, which gives $\deg(P) = 1$.<br />
-
-        Suppose $P$ takes only positive values or only negative values. Then clearly $P$ has even multiplicity
-        at 0, so $P(x) = x^{2n}Q(x)$ for some polynomial $Q(x)$ without real roots. 
-        Conversely, it is easy to
-        check that the above polynomials work, since for $P(x) = ax$, $P(x) + P(y) + P(z) = a(x + y + z)$ and
-        $a(x + y + z) = 0 \Leftrightarrow x + y + z=0$.
-        For $P(x) = x^{2n}Q(x)$, clearly $P(x) + P(y) + P(z) \neq 0$ for $x, y, z$
-        with not all of them equal to 0.
-    </p>
-
-<p><b>JOM 2013, Problem 4 (C3). </b></p>
-
-    <p><b>JOM 2013, G2. </b>
-        Let $\omega_1$ and $\omega_2$ be two circles, with centres $O_1$ and $O_2$ respectively,
-        intersecting at $X$ and $Y$. Let a line tangent to both $\omega_1$ and $\omega_2$ at $A$ and $B$, respectively. 
-        Let $E,F$ be points on $O_1O_2$ such that $XE$ is tangent to $\omega_1$ and $YF$ is tangent to $\omega_2$. Let
-        $AE\cap \omega_1=A, C$ and $BF\cap\omega_2=B,D$.<br />
-        Show that line $BO_2$ is tangent to the circumcircle of $\triangle ACD$ and line $AO_2$ is tangent to $\triangle BCD$.
-    </p>
-
-    <button class="button" onclick="hideandshow(G2, G2button)" id="G2button">Show solution</button>
-    <p id="G2" style="display: none;">
-        
-    </p>
-
-    <p><b>JOM 2013, G5. </b>
-        Let $ABCD$ be a convex quadrilateral, with $AD,BC$ intersecting at $F$. Choose lines
-        $\ell_1$, $\ell_2$ such that $\ell_1$ passes through $F$ and is tangent to circle $FAB$, and $\ell_2$ passes through $F$ and is tangent to circle $FCD$.
-        Let $\ell_1, ell_2$ intersect $AC, BD$ at $W, X, Y, Z$. 
-        Prove that $A,B,C,D$ are concyclic if and only if $W,X, Y, Z$ are concyclic.
-    </p>
-
-    <p><b>JOM 2013, N5. </b>Let $p$ be an odd prime such that $2^p+1|p^p+1$. Prove that any prime divisor of $2^p+1$ other than $3$ is greater than $6p$.</p>
-
-    <button class="button" onclick="hideandshow(N5, N5button)" id="N5button">Show solution</button>
-    <div id="N5" style="display: none;">
+    <button class="button" onclick="hideandshow(G5, G5button)" id="G5button">Show solution</button>
+    <div id="G5" style="border: 1px solid black; display: none;">
         <p>
-            Let $q\neq 3$ be a prime dividing $2p + 1$ and it is clear that $q$ divides $p^p + 1$. 
-            It is also clear that $3|2^p + 1$ (since $p$ is odd) and hence $p^p\equiv -1\pmod{3}$. 
-            So $p\equiv -1\pmod{3}\Rightarrow p^p\equiv -1\pmod{6}$. 
-            Also that $2^p\equiv -1\pmod{q}\Rightarrow 2^{2p}\equiv 1\pmod{q}$. 
-            Let $r$ to be the minimal positive integer such that $2^r\equiv 1\pmod{q}$. 
-            It is clear that $r|2p$, so $r\in\{1, 2, p, 2p\}$. 
-            But $r=1,2$ implies that $q|1$ or $q|3$,
-            which is impossible, and by (1), $r\neq p$, so $r = 2p$. 
-            But since $\phi(q)=q-1$ by Fermat's little theorem,
-            $2p|q-1$, so $\exists k\in\mathbb{N}$ s.t. $q=2kp+1$.
-        </p>
-        <p>
-            We will now show that $k\neq 1, 2$. 
-            We have $q|p^p+1\Rightarrow q|\left(\frac{q-1}{2k}\right)^p+1$
-            $\Rightarrow q|\frac{(q-1)^p+(2k)^p}{(2k)^p}$
-            $\Rightarrow q|-1+(2k)^p$, since $q$ is relatively prime to $2k$.
-            If $k=1$, from $q|1+2^p$ follows $q|2$, which is impossible.
-            If $k=2$, $q=4p+1$, and so $q=4p+1\equiv 4(2)+1\equiv 0\pmod{3}$,
-            contradicting the fact that $q$ is prime. 
-            Hence $k\ge 3$ and $q\ge 6p+1 > 6p$, as desired.
+            Let $P$ be the projection from $A$ to $XO$ and we claim that $P$ lies on $\omega_B$ and $\omega_C$. 
+            Let the midpoint of $AC$ be $M_B$. 
+            Since $\angle XB_1A=XPA=90^{\circ}$, we have $X, B_1, P, A$ concyclic and 
+            $\angle (PB_1, B_1A)=\angle (PX, XA)$ and
+            $\angle (B_1P, PX)=\angle (B_1A, AX)$. 
+            Also, since $O, M_B, A, P$ are concyclic (becuse $\angle OM_BA=\angle OPA=90^{\circ}$), 
+            we have $\angle (OP, PM_B)=\angle (OA, AM_B)$. 
+            So $\angle (PB_1, B_1A)=\angle (PB_1, B_1M_B)$
+            $=\angle (PX, XA)$
+            $=\angle (OX, XA)$
+            $=\angle (XA, AO)$
+            $=\angle (XA, AB_1)+\angle (AB_1, AO)$
+            $=\angle (XP, PB_1)+\angle (AM_B, AO)$
+            $=\angle (OP, PB_1)+\angle (PM_B, PO)$
+            $=\angle (PM_B, PB_1)$. 
+            This means $M_BB_1=M_BP$ and $P$ lies on $\omega_B$. 
+            Likewise, it lies on $\omega_C$. 
         </p>
     </div>
 
-    <p><b>JOM 2013, N6. </b> Find all functions
-    $f:\mathbb{Z}\to\mathbb{Z}$ such that for all prime $p$ the following condition holds:
-    $$p|ab+bc+ca\Leftrightarrow p|f(a)f(b)+f(b)f(c)+f(c)f(a).$$
-    </p>
-    <button class="button" onclick="hideandshow(N6, N6button)" id="N6button">Show solution</button>
-    <div id="N6" style="display: none;">
+
         <p>
-            Answer: $f(a)\equiv a$ or $f(a)\equiv -a$.
+            <b>JOM 2014, N11.</b>
+            Prove that for all nonzero integers $c$ there exists composite positive integers $a, b$ such that:
+            <br />
+            (i) $a - b = c$.
+            <br />
+            (ii) $\gcd(a, b) = \gcd(a, c) = \gcd(b, c) = 1$.
+        </p>
+    <button class="button" onclick="hideandshow(N11, N11button)" id="N11button">Show solution</button>
+    <div id="N11" style="border: 1px solid black; display: none;">
+        <p>
+            <b>Solution 1. </b>
+            We may assume that $c>0$ since if $a-b=c$ then $b-a=-c$. 
+            Let $p, q$ be distinct primes not divisible by $c$. 
+            Consider the set $P=\{ap^2 | a\in\mathbb{N}\}$. 
+            Since $p^2\perp q^2$, 
+            $P$ contains the complete residues mod $q^2$, 
+            and there exist infinitely many $a$ such that $ap^2\equiv c\pmod{q^2}$. 
+            So there exists $a, b$ with $ap^2-bq^2=c$, and $b$ positive for $a$ sufficiently large. 
+            Clearly, $ap^2$ and $bq^2$ are composite.
+        </p>
+        <p>
+            Notice that $a$ may not be relatively prime to $c$. 
+            However, for any $x\in\mathbb{N}$ we have 
+            $(a+xq^2)p^2-(b+xp^2)q^2=c$. 
+            Moreover, $c, p, q$ are pairwise relatively prime. 
+            Thus by Dirichlet's theorem, there are infinitely many $x$ such that 
+            $a+xq^2$ and $c$ are relatively prime. 
+            The rest of the conclusion follows from that 
+            $\gcd(a, b) = \gcd(a, c) = \gcd(b, c)$. 
+        </p>
+        <p>
+            <b>Solution 2. </b>
+            W.L.O.G. let $c>0$. Let $a=(2c+1)!+2c+1$ and $b=(2c+1)!+c+1$. 
+            $\gcd (a,c)=\gcd (2c+1, c)=1$ since $c|(2c+1)!$. 
+            Moreover, $2c+1|(2c+1)!+2c+1$ and $c+1|(2c+1)!+c+1$ and both $2c+1, c+1>1$. 
         </p>
     </div>
+
+        <p>
+            <b>JOM 2013, A5.</b>
+            Find all polynomials $P\in \mathbb{R}[x]$ such that
+            $P(x)+P(y)+P(z)=0\Rightarrow x+y+z=0$.
+        </p>
+        <button class="button" onclick="hideandshow(A5, A5button)" id="A5button">Show solution</button>
+        <p id="A5" style="border: 1px solid black; display: none;">
+            <b>Answer. </b> All $P\in\mathbb{R}[x]$ such that $P(x) = ax$ or $P(x) = ax^{2n}Q(x)$ for some $a\neq 0$, $n\ge 0$, and $Q(x)$
+            with no real root.<br />
+            <b> Solution 1</b> (Justin Lim). If $P(x) = 0$ for some $x$, then $3P(x) = 0 \Rightarrow x = 0$.
+            Suppose $P(0) \neq 0$, then $P$ has no real root, so we're done.
+            Suppose $P(0) = 0$. If $P$ takes both positive and negative
+            values, then $P$ is surjective on $R$.
+            Take infinitely many pairs $x,y$ such that $P(x)+P(y) = 0 \Rightarrow x+y =
+            0 \Rightarrow P(x) + P(-x) = 0.$
+            It follows that $P(x) + P(-x)\equiv 0$ for all real $x$. For fixed x, choose $z$ such
+            that $P(x) + P(x) + P(z) = 0 \Rightarrow z = -2x \Rightarrow 2P(x) = P(2x)$, which gives $\deg(P) = 1$.<br />
+
+            Suppose $P$ takes only positive values or only negative values. Then clearly $P$ has even multiplicity
+            at 0, so $P(x) = x^{2n}Q(x)$ for some polynomial $Q(x)$ without real roots.
+            Conversely, it is easy to
+            check that the above polynomials work, since for $P(x) = ax$, $P(x) + P(y) + P(z) = a(x + y + z)$ and
+            $a(x + y + z) = 0 \Leftrightarrow x + y + z=0$.
+            For $P(x) = x^{2n}Q(x)$, clearly $P(x) + P(y) + P(z) \neq 0$ for $x, y, z$
+            with not all of them equal to 0.
+        </p>
+
+    <p>
+        <b>JOM 2013, Problem 4 (C3). </b>
+        Let $n$ be a positive integer.
+        A <i>pseudo-Gangnam Style</i> is a dance competition between players $A$ and $B$.
+        At time $0$, both players face to the north.
+        For every $k\ge 1$, at time $2k-1$, player $A$ can either choose to stay stationary, or turn $90^{\circ}$ clockwise,
+        and player $B$ is forced to follow him;
+        at time $2k$, player $B$ can either choose to stay stationary, or turn $90^{\circ}$ clockwise, and player $A$ is forced to follow him.
+        <br />
+        After time $n$, the music stops and the competition is over. If the final position of both players is north or east, $A$ wins. If the final position of both players is south or west, $B$ wins. Determine who has a winning strategy when:
+        <br />
+        (a) $n=2013^{2012}$;
+        <br />
+        (b) $n=2013^{2013}$.
+    </p>
+
+    <button class="button" onclick="hideandshow(Q4,Q4button)" id="Q4button">Show Solution </button>
+    <p id="Q4" style="border: 1px solid black; display: none;">
+        (a) At time $1$, let $A$ choose to be stationary.
+        For the subsequent steps (i.e. $k\ge 1$),
+        if $B$ stays stationary at time $2k$ then $A$ moves $90^{\circ}$ at time $2k+1$.
+        On the other hand, if $B$ turns $90^{\circ}$ at time $2k$ then $A$ stays stationary at time $2k+1.$
+        So their positions form a cycle of period 8.
+        In particular, at time $8k+1$ both players will come to original position, i.e. north.
+        Since $2013^{2012}\equiv 1\pmod {8},$ their final position will be north and $A$ will win.
+        <br />
+        (b) For $k\ge 1$, if $A$ stays stationary at time $2k-1$ then $B$ moves $90^{\circ}$ at time $2k$.
+        On the other hand, if $A$ turns $90^{\circ}$ at time $2k-1$ then $B$ stays stationary at time $2k.$
+        Again, it is a cycle of period 8, and at time $8k+4$ both players are facing south.
+        Since $2013^{2013}\equiv 5\pmod 8$, we know that at time $2013^{2013}-1$ both players are at south,
+        and for the final step $A$ can only choose to stay facing south or turn $90^{\circ}$ clockwise to face west.
+        So $B$ will definitely win.
+    </p>
+
+        <p>
+            <b>JOM 2013, G2. </b>
+            Let $\omega_1$ and $\omega_2$ be two circles, with centres $O_1$ and $O_2$ respectively,
+            intersecting at $X$ and $Y$. Let a line tangent to both $\omega_1$ and $\omega_2$ at $A$ and $B$, respectively.
+            Let $E,F$ be points on $O_1O_2$ such that $XE$ is tangent to $\omega_1$ and $YF$ is tangent to $\omega_2$. Let
+            $AE\cap \omega_1=A, C$ and $BF\cap\omega_2=B,D$.<br />
+            Show that line $BO_2$ is tangent to the circumcircle of $\triangle ACD$ and line $AO_2$ is tangent to $\triangle BCD$.
+        </p>
+
+        <button class="button" onclick="hideandshow(G2, G2button)" id="G2button">Show solution</button>
+        <p id="G2" style="border: 1px solid black; display: none;">
+
+        </p>
+
+        <p>
+            <b>JOM 2013, G5. </b>
+            Let $ABCD$ be a convex quadrilateral, with $AD,BC$ intersecting at $F$. Choose lines
+            $\ell_1$, $\ell_2$ such that $\ell_1$ passes through $F$ and is tangent to circle $FAB$, and $\ell_2$ passes through $F$ and is tangent to circle $FCD$.
+            Let $\ell_1, ell_2$ intersect $AC, BD$ at $W, X, Y, Z$.
+            Prove that $A,B,C,D$ are concyclic if and only if $W,X, Y, Z$ are concyclic.
+        </p>
+
+        <p><b>JOM 2013, N5. </b>Let $p$ be an odd prime such that $2^p+1|p^p+1$. Prove that any prime divisor of $2^p+1$ other than $3$ is greater than $6p$.</p>
+
+        <button class="button" onclick="hideandshow(N5, N5button)" id="N5button">Show solution</button>
+        <div id="N5" style="border: 1px solid black; display: none;">
+            <p>
+                Let $q\neq 3$ be a prime dividing $2p + 1$ and it is clear that $q$ divides $p^p + 1$.
+                It is also clear that $3|2^p + 1$ (since $p$ is odd) and hence $p^p\equiv -1\pmod{3}$.
+                So $p\equiv -1\pmod{3}\Rightarrow p^p\equiv -1\pmod{6}$.
+                Also that $2^p\equiv -1\pmod{q}\Rightarrow 2^{2p}\equiv 1\pmod{q}$.
+                Let $r$ to be the minimal positive integer such that $2^r\equiv 1\pmod{q}$.
+                It is clear that $r|2p$, so $r\in\{1, 2, p, 2p\}$.
+                But $r=1,2$ implies that $q|1$ or $q|3$,
+                which is impossible, and by (1), $r\neq p$, so $r = 2p$.
+                But since $\phi(q)=q-1$ by Fermat's little theorem,
+                $2p|q-1$, so $\exists k\in\mathbb{N}$ s.t. $q=2kp+1$.
+            </p>
+            <p>
+                We will now show that $k\neq 1, 2$.
+                We have $q|p^p+1\Rightarrow q|\left(\frac{q-1}{2k}\right)^p+1$
+                $\Rightarrow q|\frac{(q-1)^p+(2k)^p}{(2k)^p}$
+                $\Rightarrow q|-1+(2k)^p$, since $q$ is relatively prime to $2k$.
+                If $k=1$, from $q|1+2^p$ follows $q|2$, which is impossible.
+                If $k=2$, $q=4p+1$, and so $q=4p+1\equiv 4(2)+1\equiv 0\pmod{3}$,
+                contradicting the fact that $q$ is prime.
+                Hence $k\ge 3$ and $q\ge 6p+1 > 6p$, as desired.
+            </p>
+        </div>
+
+        <p>
+            <b>JOM 2013, N6. </b> Find all functions
+            $f:\mathbb{Z}\to\mathbb{Z}$ such that for all prime $p$ the following condition holds:
+            $$p|ab+bc+ca\Leftrightarrow p|f(a)f(b)+f(b)f(c)+f(c)f(a).$$
+        </p>
+        <button class="button" onclick="hideandshow(N6, N6button)" id="N6button">Show solution</button>
+        <div id="N6" style="border: 1px solid black; display: none;">
+            <p>
+                Answer: $f(a)\equiv a$ or $f(a)\equiv -a$.
+            </p>
+        </div>
 
 </body>
 </html>
