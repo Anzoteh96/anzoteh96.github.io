@@ -31,7 +31,7 @@
         </li>
         <li>
             <div class="dropdown">
-                <button class="dropbtn">Codings</button>
+                <a href="coding.html" class="dropbtn">Codings</a>
             </div>
         </li>
         <li>
@@ -55,8 +55,17 @@
     <script src="anzo_jsfn.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     <p>
-        The idea of hosting a Junior Olympiad of Mathematics for the junior students in the IMO camp ignited my thoughts of creating problems for the junior students. 
-        The first few problems were proposed after IMO 2012, where I got inspiration from problems 4 and 5 in the IMO.
+        The idea of hosting a Junior Olympiad of Mathematics (JOM) for the junior students in the IMO camp ignited my thoughts of creating problems for the junior students. 
+        In particular, I proposed my first problem to the Olympiad after being inspired by <a href="https://artofproblemsolving.com/community/c6h488500p2737336">IMO 2012, Problem 4:</a> 
+        a problem that caused turmoils both among the students during the contests, and among the leaders and coordinators during the coordination sessions. 
+        Nevertheless, some beauty of the problem still exists in this IMO problem, which I extracted it and turned it into a problem that made itself into N6 on the JOM shortlist. 
+    </p>
+    <p>
+        <a href="https://artofproblemsolving.com/community/c6h488511p2737425">Problem 5</a> of the same Olympiad also inspired me to create another geometry problem, 
+        also for the first edition of the Junior Olympiad. 
+        Unwilling to succumb to the fact that I didn't have enough time to attempt this problem on the contest (blame problem 4), 
+        I later attempted it again and found an elegant solution using poles and polars. 
+        That led me to the unexpected discovery of a geometric identity that eventually became problem G2 on the JOM shortlist. 
     </p>
 
     <p>Below are the 10 problems I proposed for the first three editions of JOM. Have fun solving!</p>
@@ -269,7 +278,18 @@
 
         <button class="button" onclick="hideandshow(G2, G2button)" id="G2button">Show solution</button>
         <p id="G2" style="border: 1px solid black; display: none;">
-
+            We show that both $C$ and $D$ lie on the circle with $AB$ as diameter. 
+            Denote $T$ as the midpoint of $AB$ (by power of point theorem $T, X, Y$ are collinear). 
+            From $TA\perp AO_1$ and $TB\perp BO_2$ this will entail that $AO_1$ and $BO_2$ tangent to the circle with $AB$ as diameter.
+            <br />
+            One way to see it is that by symmetry, we have $YE$ tangent to $\omega_1$, too. 
+            Thus $E$ is the pole of $XY$ w.r.t. $\omega_1$. 
+            Also notice that the polar of $A$ w.r.t. $\omega_1$ is $AB$ itself. 
+            Thus by La Hire's theorem, the pole of $AE$ is the intersection of the polar of $A$ (i.e. $AB$) and the polar of $E$ (i.e. $XY$), 
+            which is $T$. 
+            With $AE$ intersecting $\omega_1$ at $A$ and $C$, we know that $TA$ and $TC$ are both tangent to $\omega_1$. 
+            Similarly, $TB$ and $TD$ are both tangent to $\omega_2$. 
+            This entails $TA=TB=TC=TD$, Q.E.D. 
         </p>
 
         <p>
@@ -279,7 +299,57 @@
             Let $\ell_1, ell_2$ intersect $AC, BD$ at $W, X, Y, Z$.
             Prove that $A,B,C,D$ are concyclic if and only if $W,X, Y, Z$ are concyclic.
         </p>
-
+    <button class="button" onclick="hideandshow(G55, G55button)" id="G55button">Show solution</button>
+    <div id="G55" style="border: 1px solid black; display: none;">
+        <p>
+            Suppose that $ABCD$ is cyclic.
+            Now $\angle WFA$
+            $=\angle FBA$
+            $=\angle FDC$
+            $=\angle ZFB$,
+            $\angle WAF$
+            $=\angle DAC$
+            $=\angle DBC$
+            $=\angle ZBF$.
+            Considering triangles $WAF$ and $ZBF$,
+            we know that $\angle WFA$
+            $=\angle ZFB$,
+            $\angle WAF$
+            $=\angle ZBF$,
+            $\angle AWF=\angle BZF\Rightarrow $
+            $\angle XWY=\angle XZY$.
+            So $WXYZ$ is cyclic.
+        </p>
+        <p>
+            For the other direction we neeed the following lemma:
+            Given a non-cyclic convex quadrilateral $ABCD$, we have
+            $\angle CDA+\angle CBA>180^{\circ}$
+            $\Leftrightarrow\angle CBD > \angle CAD$
+            $\Leftrightarrow\angle ADB > \angle ACB$
+            $\Leftrightarrow\angle BDC > \angle BAC$
+            $\Leftrightarrow\angle ABD > \angle ACD$.
+            Indeed, if we let $C'$ be on $AC$ with $ABC'D$ cyclic,
+            then $C$ lies outside the circle circumscribing $ABC'D$, and
+            $C'$ is on angle domain $DBC$ and angle domain $ADC$.
+            Therefore,
+            $\angle CBD >\angle C'BD= \angle CAD$,
+            $\angle ADB =\angle AC'B > \angle ACB$,
+            $\angle BDC > \angle BDC' = \angle BAC$,
+            $\angle ABD > \angle AC'D = \angle ACD$.
+        </p>
+        <p>
+            Now assume that $WXYZ$ is cyclic, but $ABCD$ is not.
+            W.l.o.g. let $\angle CDA+\angle CBA>180^{\circ}$.
+            Now $\angle ZFB=\angle FDC > \angle FBA=\angle WFA$.
+            Also that $\angle FWA=\angle FZB$, sine $\angle XWY=\angle XZY$.
+            So $\angle CD=\angle WAF=180^{\circ}-\angle FWA$
+            $=\angle WFA$
+            $>180^{\circ}-\angle FZB-\angle BFZ=\angle FBZ=\angle CBD$.
+            But from the lemma above we have $\angle CBD>\angle CAD$, contradiction.
+            The case where $\angle CDA+\angle CBA< 180^{\circ}$ is completely analogous. 
+        </p>
+        
+    </div>
         <p><b>JOM 2013, N5. </b>Let $p$ be an odd prime such that $2^p+1|p^p+1$. Prove that any prime divisor of $2^p+1$ other than $3$ is greater than $6p$.</p>
 
         <button class="button" onclick="hideandshow(N5, N5button)" id="N5button">Show solution</button>
@@ -317,6 +387,84 @@
         <div id="N6" style="border: 1px solid black; display: none;">
             <p>
                 Answer: $f(a)\equiv a$ or $f(a)\equiv -a$.
+            </p>
+            <p>
+                Denote $ab+bc+ca$ as $L$ and $f(a)f(b)+f(b)f(c)+f(c)f(a)$ as $R$.
+                It is not hard to see that $L=0\Leftrightarrow R=0$, 
+                since 0 is the only integer divisible by all primes. 
+                Hence plugging $a=b=c=0$ gives $f(0)=0$. 
+                Also, $|L|=1$ iff $|R|=1$, since 1 is the only integer divisible by none of the primes. 
+                Hence plugging $a=0, b, c\in\{1, -1\}$ gives
+                $f(1), f(-1)\in\{1, -1\}$. 
+                Letting $a=0, b=1$ gives $L=c$, $R=f(1)f(c)$, 
+                but since $|f(1)|=1$ we have $|R|=|f(c)|$ so
+                $p|c$ iff $p|f(c)$ for each prime $p$...(1). 
+            </p>
+            <p>
+                Now suppose that $f(m)=f(n)$ for some integers $m$ and $n$. 
+                Plugging $(a,b,c)=(m,-2m, -2m)$ gives 
+                $L=0$, so $2f(m)f(-2m)+f(-2m)f(-2m)=R=0$. 
+                Plugging $(a,b,c)=(n, -2m, -2m)$ gives 
+                $R=2f(n)f(-2m)+f(-2m)f(-2m)$
+                $=2f(m)f(-2m)+f(-2m)f(-2m)$
+                $=0$. 
+                This forces $L=0$, and therefore 
+                $4m^2-4mn=0$, or $4m(m-n)=0$. 
+                This forces $m=n$, or $m=0$. 
+                The latter case means that $f(n)=f(0)=0$ for some integer $n$, 
+                but from (1) we have $p|n$ for all primes $n$. 
+                Hence $n=m=0$, in this case. 
+                In either case we have $m=n$, so $f$ is injective...(2). 
+            </p>
+            <p>
+                Now we prove that $f$ is odd, i.e. $f(-a)=-f(a)$ for all integers $a$.
+                Assume that $f(a)+f(-a)\neq 0$ for some $a$.  
+                Let $b=-a$, then $L=-a^2$ for all integers $c$. 
+                This means $p|a$ iff $p|L$ iff $p|R$ iff $p|f(a)f(-a)+f(c)(f(a)+f(-a))$. 
+                Now, denote $u=\gcd(f(a)+f(-a), f(a)f(-a))$, 
+                and for each integer $x$, denote $p(x)$ as the set of primes that divide $x$ 
+                (so $p(0)$ is the set of all primes, and $p(\pm 1)$ is empty). 
+                We established the equivalence $p(c)=p(f(c))$ for all integers $c$. 
+                Denote $f(a)+f(-a)=xu$ and $f(a)f(-a)=yu$, so $\gcd(x,y)=1$ and 
+                $p(x)\subseteq p(a)$. 
+                Let's choose some $c$ such that $p(c)=p(a)\backslash p(x)$, 
+                then since $p(xy)=p(x)\cup p(y)$, we have 
+                $p(x)\cap p(yf(c))$
+                $=p(x)\cap (p(y)\cup p(c))$
+                $=(p(x)\cap p(y))\cup(p(x)\cap p(c))$
+                $=\phi\cup\phi$
+                $=\phi$
+                so $x$ and $yf(c)$ are relatively prime. 
+                Recall that $R=u(x+yf(c))$. 
+                If $p(a)\backslash p(x)\neq\phi$, then there exists infinitely $c$ with 
+                $p(c)=p(a)\backslash p(x)\neq\phi$, so 
+                we can choose such $c$ satisfying $x+yf(c)\neq\pm 1$ 
+                (the fact that $f$ is injective implies that there are infinitely many possible values of $f(c)$). 
+                Otherwise, $c=\pm 1$ and with $x\neq 0$ we know that either $x+y$ or $x-y$ is not in the set $\{1, -1\}$ 
+                (injectivity of $f$ shows that $f(1), f(-1)$ are precisely $1, -1$). 
+                In either case there is a prime $q$ dividing $x+yf(c)$, 
+                but with $\gcd (x, yf(c))=1$, $q$ divides neither of them. 
+                This gives $q\not\in p(x), p(y), p(c)$ and with $p(x)\cup p(c)=p(a)$ we have 
+                $q\not\in p(a)$, or $q\nmid -a^2=L$, contradiction. 
+            </p>
+            <p>
+                Finally, we establish the equality $f(kx)=kf(x)$ for all integers $k, x$. 
+                We induct on $k$ and the base case $k=1$ is obvious. 
+                Now let $f(kx)=kf(x)$ for some $k> 0$ and for all $x$.
+                Letting $(a,b,c)=kx, -k(k+1)x, -(k+1)x$ gives $L=0$, so
+                $0=R=f(kx)f(-k(k+1)x)+f(kx)f(-(k+1)x)+f(-k(k+1)x)f(-(k+1)x)$
+                $=f(k(k+1)x)f((k+1)x)-f(kx)f((k+1)x)-f(kx)f(k(k+1)x)$ 
+                (notice the implicit use of the identity $f(-a)=-f(a))$.
+                The inductive hypothesis $f(kx)=kf(x)$ allows us to factor $k$ out form the equation, so
+                $0=kf((k+1)x)f((k+1)x)-kf(x)f((k+1)x)-kf(x)kf((k+1)x)$
+                $=kf((x+1)x)(f((k+1)x)-f(x)-kf(x))$, 
+                since $k > 0$ anf $f((x+1)x)\neq 0$ for $x > 0$, 
+                $f((k+1)x)=(k+1)f(x)$, as desired. 
+                In particular, $f(c)=cf(1)$. 
+                If $f(1)=1$, then $f(c)=c$ for all integers $c$ and if $f(1)=-1$, 
+                then $f(c)=-c$ for all integers $c$. 
+                Both functions satisfy the problem condition since $L=R$ in both cases. 
+                Q.E.D. 
             </p>
         </div>
 

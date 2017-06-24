@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Trainer's Diary</title>
-
-    <ul id="drops" style="list-style-type:none">
+    
+    <ul id="drops" style="list-style-type:none;">
         <!--no bullet-->
         <li>
             <div class="dropdown">
@@ -32,7 +32,7 @@
         </li>
         <li>
             <div class="dropdown">
-                <button class="dropbtn">Codings</button>
+                <a href="coding.html" class="dropbtn">Codings</a>
             </div>
         </li>
         <li>
@@ -42,41 +42,223 @@
         </li>
     </ul>
     <h1 style="text-align: center;background-color:lightblue;">Anzo's Mathematics</h1>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+            src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
     <link rel="stylesheet" href="imo_style.css" />
 </head>
 <body>
+    <script src="anzo_jsfn.js"></script>
     <div id="mydiv" class="tabcontent">
         <h1>IMO 2016 Trainings</h1>
         <p>
-            I was invited by Mr. Suhaimi Ramly to deliver geometry lectures in the IMO 2016 training camps in January, March (pre-APMO camp) and April. 
+            I was invited by Mr. Suhaimi Ramly, the head coach of the training camps to deliver geometry lectures in the IMO 2016 training camps in January, March (pre-APMO camp) and April. 
         </p>
-        <h2>Lectures Given</h2>
+        <h2>IMO 2016 Camp 2: January 12-16, 2016</h2>
+        <h3>Lecture Delivered: Trigonometric Tricks in Solving Geometry Problems</h3>
         <p>
-            I gave a geometry lecture in each of the three training camps stated above, namely:
+            The basics and fundamentals are almost the same as posted on my <a href="trigonometry.html">Trigonometry</a> page. 
+            This lecture was given to the students who had not attended training camps in any of the previous years. 
+            The problems with solutions included in the handouts were:
             <ul>
                 <li>
-                    January: Trigonometric bashing in solving geometry problems (with the fundamentals exactly the same as <a href="trigonometry.html">here</a>).
+                    <a href="https://artofproblemsolving.com/community/c6h532678p3046941">APMO 2013, Problem 1.</a> 
+                    Let $ABC$ be an acute triangle with altitudes $AD$, $BE$, and $CF$, and let $O$ be the center of its circumcircle. Show that the segments $OA$, $OF$, $OB$, $OD$, $OC$, $OE$ dissect the triangle $ABC$ into three pairs of triangles that have equal areas.
                 </li>
+                <br />
                 <li>
-                    March: Projective geometry (poles and polars, harmonic bundles, homothety, Monge's theorem, Monge d'Alembert theorem).
+                    <a href="https://artofproblemsolving.com/community/c6h472952p2648114">APMO 2012, Problem 4.</a> 
+                    Let $ ABC $ be an acute triangle. Denote by $ D $ the foot of the perpendicular line drawn from the point $ A $ to the side $ BC $, by $M$ the midpoint of $ BC $, and by $ H $ the orthocenter of $ ABC $. Let $ E $ be the point of intersection of the circumcircle $ \Gamma $ of the triangle $ ABC $ and the half line $ MH $, and $ F $ be the point of intersection (other than $E$) of the line $ ED $ and the circle $ \Gamma $. Prove that $ \tfrac{BF}{CF} = \tfrac{AB}{AC} $ must hold.
                 </li>
+                <br />
                 <li>
-                    April: Three geometry theorems (Simson's theorem, Casey's theorem, and Sawayama Thebault's theorem).
+                    <a href="https://artofproblemsolving.com/community/c6h532682p3046946">APMO 2013, Problem 5.</a> 
+                    Let $ABCD$ be a quadrilateral inscribed in a circle $\omega$, and let $P$ be a point on the extension of $AC$ such that $PB$ and $PD$ are tangent to $\omega$. The tangent at $C$ intersects $PD$ at $Q$ and the line $AD$ at $R$. Let $E$ be the second point of intersection between $AQ$ and $\omega$. Prove that $B$, $E$, $R$ are collinear.
+                </li>
+                <br />
+                <li><a href="https://artofproblemsolving.com/community/c6h488830p2739330">IMOSL 2011, G5.</a> 
+                    Let $ABC$ be a triangle with incenter $I$ and circumcircle $\omega$. Let $D$ and $E$ be the second intersection points of $\omega$ with the lines $AI$ and $BI$, respectively. The chord $DE$ meets $AC$ at a point $F$, and $BC$ at a point $G$. Let $P$ be the intersection point of the line through $F$ parallel to $AD$ and the line through $G$ parallel to $BE$. Suppose that the tangents to $\omega$ at $A$ and at $B$ meet at a point $K$. Prove that the three lines $AE, BD,$ and $KP$ are either parallel or concurrent.
+                </li>
+                <br />
+                <li>RIMO 2014, Day 1, Problem 2. 
+                    In a quadrilateral $ABCD$ with $\angle B=\angle D=90^{\circ}$, the extensions of $AB$ and $DC$ meet at $E$; and the extensions of $AD$ and $BC$ meet at $F$. A line through $B$ parallel to $CD$ intersects the circumcircle $\omega$ of the triangle $ABF$ at $G$ distinct from $B$; the line $EG$ intersects $\omega$ at $P$ distinct from $G$; and the line $AP$ intersects $CE$ at $M$. Prove that $M$ is the midpoint of $CE$.
+                </li>
+                <br />
+                <li><a href="https://artofproblemsolving.com/community/c6h207870p1143932">IMOSL 2007, G2.</a> 
+                    Given an isosceles triangle $ABC$ with $AB=AC$.  The midpoint of side $BC$ is denoted by $M$. Let $X$ be a variable point on the shorter arc $MA$ of the circumcircle of triangle $ABM$. Let $T$ be the point in the angle domain $BMA$, for which $\angle TMX= 90^{\circ}$ and $TX=BX$. Prove that $\angle MTB-\angle CTM$ does not depend on $X$.
                 </li>
             </ul>
-        </p>
-        <h2>Problem-solving session conducted. </h2>
+            </p>
+            <h3>Problem solving session conducted: Trigonometric Tricks in Solving Geometry Problems</h3>
+            <p>
+                The problem solving session was themed on the same as that given in my lecture of trigonometry, except that this was targetted to a more experience group of students. 
+                As such, the solution to the following difficult problem was demonstrated to the students:
+                <ul>
+                    <li><a href="https://artofproblemsolving.com/community/c6h596927p3542092">IMO 2014, Problem 3.</a> 
+                        Convex quadrilateral $ABCD$ has $\angle ABC = \angle CDA = 90^{\circ}$.
+                        Point $H$ is the foot of the perpendicular from $A$ to $BD$.
+                        Points $S$ and $T$ lie on sides $AB$ and $AD$, respectively,
+                        such that $H$ lies inside triangle $SCT$ and
+                        \[ \angle CHS - \angle CSB = 90^{\circ}, \quad \angle THC - \angle DTC = 90^{\circ}. \]
+                        Prove that line $BD$ is tangent to the circumcircle of triangle $TSH$.
+                    </li>
+                </ul>
+            </p>
+        <h2>IMO 2016 Camp 3: March 4-8, 2016</h2>
+        <h3>Lectures Delivered: Geometry Big Guns</h3>
         <p>
-            In addition to the geometry lectures I have given, I have also conducted problem solving sessions based on the following projects I have done in the 
-            2012 International Mathematics Tournament of Towns Summer Conference (that I attended together with Justin) :
+            During that camp, Justin Lim (IMO 2014 gold medallist, currently an undergraduate at MIT) and I collectively covered a few advanced level tricks in geometry. 
+            They are detailed below (together with the problems solvable using these theorems): 
+            <h4>Harmonic Bundles</h4>
             <ul>
-                <li><a href="http://www.turgor.ru/lktg/2012/1/1-1en.pdf">Amazing properties of binomial coefficients</a></li>
+                <li><a href="https://artofproblemsolving.com/community/c6h39093p243438">IMOSL 2004, G8.</a> 
+                    Given a cyclic quadrilateral $ABCD$, let $M$ be the midpoint of the side $CD$, and let $N$ be a point on the circumcircle of triangle $ABM$. Assume that the point $N$ is different from the point $M$ and satisfies $\frac{AN}{BN}=\frac{AM}{BM}$. Prove that the points $E$, $F$, $N$ are collinear, where $E=AC\cap BD$ and $F=BC\cap DA$.
+                </li>
             </ul>
+            <h4>Poles and Polars + Brokard's theorem</h4>
             <ul>
-                <li><a href="http://www.turgor.ru/lktg/2012/5/index.htm">Fair cake division</a></li>
+                <li><a href="https://artofproblemsolving.com/community/c6h488511p2737425">IMO 2012, Problem 5.</a> 
+                    Let $ABC$ be a triangle with $\angle BCA=90^{\circ}$, and let $D$ be the foot of the altitude from $C$. Let $X$ be a point in the interior of the segment $CD$. Let $K$ be the point on the segment $AX$ such that $BK=BC$. Similarly, let $L$ be the point on the segment $BX$ such that $AL=AC$. Let $M$ be the point of intersection of $AL$ and $BK$.
+                <br />
+                    Show that $MK=ML$.
+                </li>
+                <br />
+                <li>
+                    JOM 2013, G7. 
+                    Given a triangle $ABC$, let $l$ be the median corresponding to the vertex $A$.  Let $E,F$ be the feet of the perpendiculars from $B,C$ to $AC,AB$.  Reflect the points $E,F$ across $l$ to the points $P,Q$.  Let $AP, AQ$ intersect $BC$ at $X,Y$.  Let $\Gamma_1, \Gamma_ 2$ be the circumcircles of $\triangle EQY,\triangle FPX.$
+                    <br />
+                    Prove that $A$ lies on the line connecting the centers of $\Gamma_1, \Gamma_2$.
+                </li>
+                <br />
+                <li>
+                    <a href="https://artofproblemsolving.com/community/c6h532682p3046946">APMO 2013, Problem 5.</a> 
+                    Let $ABCD$ be a quadrilateral inscribed in a circle $\omega$, and let $P$ be a point on the extension of $AC$ such that $PB$ and $PD$ are tangent to $\omega$. The tangent at $C$ intersects $PD$ at $Q$ and the line $AD$ at $R$. Let $E$ be the second point of intersection between $AQ$ and $\omega$. Prove that $B$, $E$, $R$ are collinear.
+                </li>
             </ul>
-            I talked about these in the March and April training camps, respectively. 
+            <h4>Homothety, Monge's theorem and Monge d'Alembert's theorem</h4>
+            <ul>
+                <li><a href="https://artofproblemsolving.com/community/c6h214649p1186805">IMOSL 2007, G8.</a> 
+                    Point $ P$ lies on side $ AB$ of a convex quadrilateral $ ABCD$. Let $ \omega$ be the incircle of triangle $ CPD$, and let $ I$ be its incenter. Suppose that $ \omega$ is tangent to the incircles of triangles $ APD$ and $ BPC$ at points $ K$ and $ L$, respectively. Let lines $ AC$ and $ BD$ meet at $ E$, and let lines $ AK$ and $ BL$ meet at $ F$. Prove that points $ E$, $ I$, and $ F$ are collinear.
+                </li>
+                <br />
+                <li>
+                    <a href="https://artofproblemsolving.com/community/c6h467561p2617981">RMM 2012, Problem 6.</a> 
+                    Let $ABC$ be a triangle and let $I$ and $O$ denote its incentre and circumcentre respectively. Let $\omega_A$ be the circle through $B$ and $C$ which is tangent to the incircle of the triangle $ABC$; the circles $\omega_B$ and $\omega_C$ are defined similarly. The circles $\omega_B$ and $\omega_C$ meet at a point $A'$ distinct from $A$; the points $B'$ and $C'$ are defined similarly. Prove that the lines $AA',BB'$ and $CC'$ are concurrent at a point on the line $IO$.
+                </li>
+            </ul>
+            The following problem combines the idea of all theorems above:
+            <ul>
+                <li><a href="https://artofproblemsolving.com/community/c6h215427p1191671">IMO 2008, Problem 6.</a> 
+                    Let $ABCD$ be a convex quadrilateral with $ BA\neq BC$. Denote the incircles of triangles $ ABC$ and $ ADC$ by $ \omega_{1}$ and $ \omega_{2}$ respectively. Suppose that there exists a circle $ \omega$ tangent to ray $ BA$ beyond $ A$ and to the ray $ BC$ beyond $ C$, which is also tangent to the lines $ AD$ and $ CD$. Prove that the common external tangents to $ \omega_{1}$ and $\omega_{2}$ intersect on $\omega$.
+                </li>
+            </ul>
         </p>
-    </div>
+        <h3>Problem solving session conducted: <a href="http://www.turgor.ru/lktg/2012/1/1-1en.pdf">Amazing properties of binomial coefficients</a></h3>
+        <p>
+            This was a project I did at the 2012 International Mathematics Tournament of Towns Summer Conference that I attended together with Justin. 
+            One theorem discussed during the session was the <a href="https://en.wikipedia.org/wiki/Wolstenholme%27s_theorem">Wolstenholme's theorem</a>, 
+            which could be useful in solving problems in Section 4 of the attached hyperlink, and the following: 
+            <ul>
+                <li><a href="https://artofproblemsolving.com/community/c6h80759p462321">APMO 2006, Problem 3.</a> 
+                    Let $p\ge5$ be a prime and let $r$ be the number of ways of placing $p$ checkers on a $p\times p$ checkerboard so that not all checkers are in the same row (but they may all be in the same column). Show that $r$ is divisible by $p^5$. Here, we assume that all the checkers are identical.
+                </li>
+            </ul>
+        </p>
+        <h2>IMO 2016 Camp 4: April 8-12, 2016</h2>
+        <h3>Lectures Delivered: Three geometry theorems (Simson's theorem, Casey's theorem, and Sawayama Thebault's theorem)</h3>
+        <p>
+            For students who want to excel in Olympiad geometry and be able to solve the hardest contest geometry problems comfortably, 
+            mastery of these theorems is essential. 
+        </p>
+        <h4>Simson's theorem</h4>
+        <p>
+            Statement: Given a point $D$ and a triangle $ABC$, the feet of perpendiculars from $D$ to sides $BC, CA, AB$ are collinear iff $D$ lies on the circumcircle of triangle $ABC$.
+        </p>
+        Applications: 
+        <ul>
+            <li><a href="https://artofproblemsolving.com/community/c6h96p264">IMO 2003, Problem 4.</a> 
+                Let $ABCD$ be a cyclic quadrilateral. Let $P,Q,R$ be the feet of the perpendiculars from $D$ to the lines $BC, CA, AB$ respectively. Show that $PQ=QR$ if and only if the bisectors of $\angle ABC$ and $\angle ADC$ are concurrent with $AC$.
+            </li>
+            <br />
+            <li>
+                <a href="https://artofproblemsolving.com/community/c6h159837p893744">IMO 2007, Problem 2.</a> 
+                Consider  five  points $A,B,C,D$ and $E$ such that $ABCD$ is a parallelogram and $BCED$ is a cyclic quadrilateral. Let $\ell$ be a line passing through $A$. Suppose that $\ell$ intersects the interior of the segment $DC$ at $F$ and intersects line $BC$ at $G$. Suppose also that $EF=EG=EC$. Prove that $\ell$ is the bisector of angle $DAB$.
+            </li>
+            <br />
+            <li>
+                TOT Spring Fall 2008, Senior A-Level, Problem 7.
+                Each of three lines cuts chords of equal lengths in two given circles.  The points of intersection of these lines form a triangle.  Prove that its circumcircle passes through the midpoint of the
+                segment joining the centres of the circles.
+            </li>
+        </ul>
+        <h4>Casey's theorem (a.k.a. generalized Ptolemy's theorem).</h4>
+        <p>
+            Statement:  Let $\omega_1$, $\omega_2$, $\omega_3$ and $\omega_4$ be four non-intersecting and mutually exclusive circles, and let $t_{ij}$ be the length of common exterior bitangent (i.e. segment connecting $A_iA_j$ s.t. $A_i$ on $\omega_i$, $A_j$ on $\omega_j$ and $A_iA_j$ tangent to both circles externally. ) Then there exists a circle tangent internally to all four circles (in the order of $\omega_1$, $\omega_2$, $\omega_3$ and $\omega_4$) if and only if:
+$$t_{12}t_{34}+t_{23}t_{14}=t_{13}t_{24}.$$
+        </p>
+        Applications:
+        <ul>
+            <li><a href="https://artofproblemsolving.com/community/c6h80765p462346">APMO 2006, Problem 4.</a> 
+                Let $A,B$ be two distinct points on a given circle $O$ and let $P$ be the midpoint of the line segment AB. Let $O_1$ be the circle tangent to the line $AB$ at $P$ and tangent to the circle $O$. Let $l$ be the tangent line, different from the line $AB$, to $O_1$ passing through $A$. Let $C$ be the intersection point, different from $A$, of $l$ and $O$. Let $Q$ be the midpoint of the line segment $BC$ and $O_2$ be the circle tangent to the line $BC$ at $Q$ and tangent to the line segment $AC$. Prove that the circle $O_2$ is tangent to the circle $O$.
+            </li>
+            <br />
+            <li><a href="https://artofproblemsolving.com/community/c6h418983p2365045">IMO 2011, Problem 6.</a> 
+                Let $ABC$ be an acute triangle with circumcircle $\Gamma$. Let $\ell$ be a tangent line to $\Gamma$, and let $\ell_a, \ell_b$ and $\ell_c$ be the lines obtained by reflecting $\ell$ in the lines $BC$, $CA$ and $AB$, respectively. Show that the circumcircle of the triangle determined by the lines $\ell_a, \ell_b$ and $\ell_c$ is tangent to the circle $\Gamma$.
+            </li>
+            <br />
+            <li>
+                <a href="https://artofproblemsolving.com/community/c6h582820p3444910">APMO 2014, Problem 5.</a> 
+                Circles $\omega$ and $\Omega$ meet at points $A$ and $B$. Let $M$ be the midpoint of the arc $AB$ of circle $\omega$ ($M$ lies inside $\Omega$). A chord $MP$ of circle $\omega$ intersects $\Omega$ at $Q$ ($Q$ lies inside $\omega$). Let $\ell_P$ be the tangent line to $\omega$ at $P$, and let $\ell_Q$ be the tangent line to $\Omega$ at $Q$. Prove that the circumcircle of the triangle formed by the lines $\ell_P$, $\ell_Q$ and $AB$ is tangent to $\Omega$.
+            </li>
+        </ul>
+        <h4>Sawayama Thebault's theorem</h4>
+        <p>
+            Statement: Let $I$ be the incentre of $\triangle ABC$, $D$ a point on line $BC$. If a circle is tangent to the circumcircle of triagle $ABC$, to segment $DC$ at $E$ and segment $DA$ at $F$. Then $E,I,F$ are collinear.
+        </p>
+
+        <h3>Problem solving session conducted: <a href="http://www.turgor.ru/lktg/2012/5/index.htm">Fair cake division</a></h3>
+        <p>
+            This is another project I did at the Summer Conference mentioned above, partnered with Justin. 
+            The project is to solve the following general problem: 
+            There are $m$ cakes, each with weight 1. 
+            We are to divide the cake into slices and distribute them to $n$ people such that everyone gets equal total weight of cake (that is, $\frac{m}{n}$).
+            Determine the maximum $k$ such that each <i>slice</i> has weight at least $k$ 
+            (basically, maximize the minimum possible slice). 
+            Notice that in the official handout this quantity $k$ is denoted as $f(m,n)$. 
+        </p>
+        <p>
+            Some auxillary results I discussed in the problem solving session were: 
+            <ul>
+                <li>$f(m, km)=\frac{1}{k}$ for all positive integers $k, m$.</li>
+                <li>$f(km, m)=1$ for all positive inetegers $k, m$. </li>
+                <li>$f(m, n)\le\frac{m}{2n}$ for all $m, n$ such that $m$ does not divide $n$. </li>
+                <li>$f(m, n)\ge \frac{m}{3n}$ for all $m, n$ sastisfying $m\le n$. 
+                When $\frac 23\le\frac mn\le\frac  34$, equality holds. 
+                </li>
+            </ul>
+        </p>
+        <p>
+            Remarkably, Justin and I submitted a solution to finding $f(31, 52)$ that was highly commended by the committee members (during the conference).
+            Have fun trying before looking at the answer!
+            
+        </p>
+        <button class="button" onclick="hideandshow(x, y)" id="y">Show solution</button>
+        <p id="x" style="display: none;">
+            Answer: $f(31, 52)=\frac{89}{364}$. 
+        </p>
+        <h2>Acronyms Used</h2>
+        <ul>
+            <li>IMO: International Mathematical Olympiad</li>
+            <li>IMOSL: International Mathematical Olympiad, shortlisted problems</li>
+            <li>APMO: Asian Pacific Mathematical Olympiad</li>
+            <li>TOT: International Mathematics Tournament of Towns</li>
+            <li>RIMO: Raffles Invitational Mathematical Olympiad</li>
+            <li>RMM: Romanian Masters in Mathematics</li>
+        </ul>
+</div>
 </body>
 </html>

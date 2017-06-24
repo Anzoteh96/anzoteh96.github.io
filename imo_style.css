@@ -1,5 +1,4 @@
 body{
-   
     font-family: verdana, sans-serif;
     padding-left:3em;
     padding-right:3em;
@@ -14,8 +13,10 @@ table, th, td, tr{
 
 
 ul#drops li{
+    background-color: #4CAF50;
+    padding-top: 16px;
+    padding-bottom: 16px;
     display: inline;
-    margin-right: -5px;
 }
 
  /* Dropdown Button */
@@ -23,6 +24,15 @@ ul#drops li{
     background-color: #4CAF50;
     color: white;
     padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.icon{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10.5px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -60,5 +70,5 @@ ul#drops li{
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #f0f0f0;
+    background-color: #e5acac;
 } 

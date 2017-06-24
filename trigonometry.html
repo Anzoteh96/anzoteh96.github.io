@@ -31,7 +31,7 @@
         </li>
         <li>
             <div class="dropdown">
-                <button class="dropbtn">Codings</button>
+                <a href="coding.html" class="dropbtn">Codings</a>
             </div>
         </li>
         <li>
@@ -57,21 +57,20 @@
     <script src="anzo_jsfn.js"></script>
     <h1>Trigonometry tricks</h1>
     <h2>Background Information</h2>
-                    <p>
-                        I discovered the trick of solving geometry problems using trigonometry in November 2011,
-                        when I started my preparation for IMO 2012 training camps.
-                        Due to many algebraic identities associated with geometry,
-                        trigonometry provides us with a hacky way to transform geometry into algebra.
-                        Thanks to trigonometry (combined with many other tools),
-                        my skills in geometry improved from not being able to solve geometry problems in the 'easy' category in IMO (Problems 1 or 4)
-                        to be able to get the 1 <i>gold</i> point on the difficult IMO 2014 Problem 3 (and later complete the solution after the contest).
-                    </p>
-
-                    <h2>High-level concepts</h2>
-                    <p>
-                        Most geometry problems are about proving identities.
-                        Some of them, like determining the ratios between lengths of two lines or areas of two polygons, are more suggestive of using trigonometry.
-                        Others, as seen in the following, can also be transformed into its algebraic/trigonometric equivalent:
+    <p>
+        I discovered the trick of solving geometry problems using trigonometry in November 2011,
+        when I started my preparation for IMO 2012 training camps.
+        Due to many algebraic identities associated with geometry,
+        trigonometry provides us with a hacky way to transform geometry into algebra.
+        Thanks to trigonometry (combined with many other tools),
+        my skills in geometry improved from not being able to solve geometry problems in the 'easy' category in IMO (Problems 1 or 4)
+        to be able to get the 1 <i>gold</i> point on the difficult IMO 2014 Problem 3 (and later complete the solution after the contest).
+    </p>
+    <h2>High-level concepts</h2>
+    <p>
+    Most geometry problems are about proving identities.
+    Some of them, like determining the ratios between lengths of two lines or areas of two polygons, are more suggestive of using trigonometry.
+    Others, as seen in the following, can also be transformed into its algebraic/trigonometric equivalent:
                         <table align="center">
                             <tr>
                                 <td>Items to prove</td>
@@ -141,6 +140,33 @@
                         </ul>
                     </p>
 
+    <h2>Good-To-Know</h2>
+    <p>
+        Trigonometric identities can be combined with the following identities in solving geometry problems:
+        <ul>
+            <li>Menelaus' theorem: 
+            Given a triangle $ABC$ and let $D$, $E$, $F$ be on lines $BC, CA, AB$, respectively. 
+            Then $D,E,F$ are collinear if and only if $\frac{BD}{DC}\cdot\frac{CE}{EA}\cdot\frac{FA}{FB}=-1$, where signed length is taken 
+            (by convention, the ratio $\frac{BD}{DC}$ is taken to be positive if $D$ lies on segment $BC$, and negative otherwise). 
+            </li>
+            <li>
+                Ceva's theorem: 
+                using the same notation above, $AD, BE, CF$ concurrent if and only if $\frac{BD}{DC}\cdot\frac{CE}{EA}\cdot\frac{FA}{FB}=1$ 
+                (again, signed ratio is used).
+            </li>
+            <li>
+                Ceva's theorem (trigonometric version) :
+                using the same notation as above, $AD, BE, CF$ concurrent if and only if 
+                $\frac{\sin\angle BAD}{\sin\angle CAD}\cdot\frac{\sin\angle CBE}{\sin\angle EBA}\cdot\frac{\sin\angle FCA}{\sin\angle FCB}=1$ 
+                (try to imagine how would signed trigonometric ratio here looks like: it is rather important!).
+            </li>
+            <li>
+                Properties of harmonic bundle: 
+                assume that $AD, BE, CF$ and let $DE$ intersect $AB$ at $F'$. Then $(F, F'; A, B)$ is harmonic. 
+                In other words $(CF, CF'; CA, CB)$ is harmonic pencil. 
+            </li>
+        </ul>
+    </p>
                     <h2>Pitfalls and notes</h2>
                     <p>
                         Although trigonometric bashing gives a shortcut in converting a problem to its easier equivalent form, it is not <i>everything.</i>
@@ -151,7 +177,7 @@
 
                     <h2> Examples </h2>
                     <p>
-                        Note: since this page is mainly about trigonometry, proofs of auxillary results that does not involve trigonometry are omitted (but quoted diretly),
+                        Note: since this page is mainly about trigonometry, proofs of auxillary results that does not involve trigonometry are omitted (but quoted directly),
                         if they can be eaily verified.
                         <b>Do not do this in any mathematical contest.</b>
                     </p>
