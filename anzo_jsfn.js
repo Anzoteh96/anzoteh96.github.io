@@ -11,3 +11,12 @@ function hideandshow(id, button) {
         y.innerHTML = 'Show Solution';
     }
 }
+
+function myFunction() {
+    var x = document.getElementById("drops");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
