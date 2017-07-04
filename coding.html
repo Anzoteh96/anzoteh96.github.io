@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <ul id="drops" style="list-style-type:none">
+    <ul class="topnav" id="drops" style="list-style-type:none">
         <!--no bullet-->
         <li>
             <div class="dropdown">
-                <a href="index.html" class="dropbtn"><i class="fa fa-home fa-2x"></i></a>
+                <a href="index.html">
+                    <button class="homeicon">
+                        <i class="fa fa-home fa-2x"></i>
+                    </button>
+                </a>
             </div>
         </li>
+
         <li>
             <div class="dropdown">
-                <button class="dropbtn">Mathematics</button>
+                <a href="mathematics.html">
+                    <button class="dropbtn">Mathematics</button>
+                </a>
                 <div class="dropdown-content">
                     <a href="imo_journey.html">IMO journey</a>
                     <a href="trigonometry.html">Trigonometry</a>
@@ -26,17 +33,23 @@
         </li>
         <li>
             <div class="dropdown">
-                <button class="dropbtn">Writings</button>
+                <a href="writings.html">
+                    <button class="dropbtn">Writings</button>
+                </a>
             </div>
         </li>
         <li>
             <div class="dropdown">
-                <a href="coding.html" class="dropbtn">Codings</a>
+                <a href="coding.html" class="dropbtn">
+                    <button class="dropbtn">Codings</button>
+                </a>
             </div>
         </li>
         <li>
             <div class="dropdown">
-                <button class="dropbtn">Music</button>
+                <a href="music.html" class="dropbtn">
+                    <button class="dropbtn">Music</button>
+                </a>
             </div>
         </li>
     </ul>
@@ -76,6 +89,12 @@
     <h2>Research Experience</h2>
     <p>
         As mentioned in my home page, I am doing a research on finding weakly connected components in a graph. 
+        The task of finding a weakly connected component can be rephrased as below:
+        <q>
+            Given a group of people, some pairs of them are friends (and friendship is mutual). 
+            For each pair of people A and B, do there exist a set of people from the group, 
+            such that we can line them up with A on one end and B on the other end, and any two neighbouring people on the line are friends?
+        </q>
         Although various algorithms exist (breadth-first search, depth-first search, quick-find, quick-union), 
         most (if not all) of them cannot update the set of connected components efficiently in the case of edge deletion. 
         This is what I am working on right now, and I will update more after my research positionship ends in late August!

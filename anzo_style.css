@@ -27,6 +27,17 @@ ul#drops li{
     cursor: pointer;
 }
 
+.homeicon {
+    background-color: #4CAF50;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: none;
+    cursor: pointer;
+}
+
 .dropdown{
     position: relative;
     display: inline-block;
@@ -54,6 +65,10 @@ ul#drops li{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.homeicon:hover{
     background-color: #3e8e41;
 }
 
