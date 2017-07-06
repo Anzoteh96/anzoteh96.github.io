@@ -12,11 +12,9 @@ table, th, td, tr{
 }
 
 
-ul#drops li{
+div#drops {
     background-color: #4CAF50;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    display: inline;
+    display: inline-block;
 }
 
  /* Dropdown Button */
@@ -78,3 +76,13 @@ ul#drops li{
 .dropdown-content a:hover {
     background-color: #e5acac;
 } 
+
+.icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .bigpic img{
+        width:300px;
+    }
+}
