@@ -1,24 +1,28 @@
-
 body{
     font-family: verdana, sans-serif;
     padding-left:3em;
     padding-right:3em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
+
+table, th, td, tr{
+    text-align:center;
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+
 
 div#drops {
     background-color: #4CAF50;
-    //display: inline-block;
+    display: inline-block;
 }
-
-
 
  /* Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
+    color: white;
     padding: 16px;
     font-size: 16px;
-    color: white;
     border: none;
     cursor: pointer;
 }
@@ -32,6 +36,10 @@ div#drops {
     padding-right: 16px;
     border: none;
     cursor: pointer;
+}
+
+.homeicon:hover{
+    background-color: #3e8e41;
 }
 
 .dropdown{
@@ -64,59 +72,17 @@ div#drops {
     background-color: #3e8e41;
 }
 
-.homeicon:hover{
-    background-color: #3e8e41;
-}
-
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #e5acac;
-}
-
+} 
 
 .icon{
     display: none;
 }
-div#profpic{
-    
-    border-radius:50px;
-}
+
 @media screen and (max-width: 600px){
     .bigpic img{
         width:300px;
     }
 }
-
-@media screen and (max-width: 600px){
-    div#drops .responsive {
-            background-color: #4CAF50;
-            width: 140px;
-        }
-        .topnav.dropdown-content.responsive{
-            display: none;
-            position: absolute;
-            background-color: #4CAF50;/*background color of our dropdowns*/
-            min-width: 160px;
-        }
-
-        /* Dropdown Button */
-        .dropbtn.responsive {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-        .homeicon.responsive {
-            background-color: #4CAF50;
-            color: white;
-            padding-top: 12px;
-            padding-bottom: 12px;
-            padding-left: 12px;
-            padding-right: 12px;
-            border: none;
-            cursor: pointer;
-        }
-}
- 

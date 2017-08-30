@@ -14,14 +14,9 @@ function hideandshow(id, button) {
 
 function myFunction() {
     var x = document.getElementById("drops");
-    if (x.className === "topnav" || x.className === "dropdown" || x.className === "dropbtn" x.className === "dropdown-content") {
+    if (x.className === "topnav") {
         x.className += " responsive";
-    }
-    var y = document.getElementById("dropcontent");
-    if (x.className === "dropdown-content"){
-        x.className += "responsive";
-    }
-    else{
-        x.className = "dropdown-content";
+    } else {
+        x.className = "topnav";
     }
 }
