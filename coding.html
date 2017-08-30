@@ -32,21 +32,15 @@
             </a>
         </div>
         <div class="dropdown">
-            <a href="coding.html">
+            <a href="coding.html" class="dropbtn">
                 <button class="dropbtn">Codings</button>
             </a>
         </div>
         <div class="dropdown">
-            <a href="music.html">
+            <a href="music.html" class="dropbtn">
                 <button class="dropbtn">Music</button>
             </a>
         </div>
-        <div class="dropdown">
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">
-                <button class="dropbtn">&#9776;</button>
-            </a>
-        </div>
-
     </div>
     <h1>My Coding Experience</h1>
     <script type="text/x-mathjax-config">
@@ -56,7 +50,7 @@
             src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
-    <link rel="stylesheet" href="imo_style.css" />
+    <link rel="stylesheet" href="css/imo_style.css" />
 </head>
 <body>
     <p>
@@ -78,22 +72,68 @@
                 <li>Promoted to Gold Division</li>
             </ul>
         </ul>
-        My first Hackathon was the Equithon held at University of Waterloo in May 2017. 
-        In addition, I was selected (via an assessment) to take part in the Waterloo Datathon in May 2017 hosted by Correlation One and Citadel LLC.
     </p>
-    <h2>Research Experience</h2>
+    <h2>Hackathon Experience: Equithon 2017</h2>
     <p>
-        As mentioned in my home page, I am doing a research on finding weakly connected components in a graph. 
-        The task of finding a weakly connected component can be rephrased as below:
-        <q>
-            Given a group of people, some pairs of them are friends (and friendship is mutual). 
-            For each pair of people A and B, do there exist a set of people from the group, 
-            such that we can line them up with A on one end and B on the other end, and any two neighbouring people on the line are friends?
-        </q>
-        Although various algorithms exist (breadth-first search, depth-first search, quick-find, quick-union), 
-        most (if not all) of them cannot update the set of connected components efficiently in the case of edge deletion. 
-        This is what I am working on right now, and I will update more after my research positionship ends in late August!
+        On May 5-7, 2017, I participated in my first hackathon: the Equithon held at the University of Waterloo. 
+        The problem that my teammates and I worked on was the fact that there were people with ideas and insights but do not have the skills to implement them. 
+        On the other hand, there were also people with advanced skills in their related fields yet do not have the insights to see which problems to solve. 
+        Hence we developed a website to connected the two types of people. 
     </p>
-    
+    <h3>Languages: HTML, CSS, Javascript. </h3>
+    <h2>Datathon Experience: Waterloo Datathon 2017</h2>
+    <p>
+        On May 13, 2017, I was selected to take part in the Waterloo Datathon (through an assessment). 
+        The task given on the day was to draw conclusion based on the data on pickups by Uber and other transportation method in different areas. 
+        My teammates and I decided to relate this data to the crime rate happening in the respective cities (using another dataset we searched on our own). 
+        Using statisical languages like R and Python, we drew a conclusion that public transportation is less perferred in areas with high crime rates. 
+    </p>
+    <h3>Languages: Python, R.</h3>
+    <h3>Technologies: Panda</h3>
+    <div="research">
+        <h2>Research Experience</h2>
+        <p>
+            As mentioned in my home page, I just finished doing a research on finding weakly connected components in a graph.
+            The task of finding a weakly connected component can be rephrased as below:
+            <q>
+                Given a group of people, some pairs of them are friends (and friendship is mutual).
+                For each pair of people A and B, do there exist a set of people from the group,
+                such that we can line them up with A on one end and B on the other end, and any two neighbouring people on the line are friends?
+            </q>
+            Although various algorithms exist (breadth-first search, depth-first search, quick-find, quick-union),
+            most (if not all) of them cannot update the set of connected components efficiently in the case of edge deletion.
+        </p>
+        <p>
+            A crucial observation in solving this mega-problem is that, in general, the probability of a connected component being split into two upon edge deletion is rather small. 
+            Having this in mind, and having familiarized myself with the existing algorithms in a static setting, I started off by modifying the features of the existing algorithms:
+            <ul>
+                <li>
+                    Breadth-first search: record the distance of each vertex from a selected vertex of its component. Deletion of an edge joining vertices of the same distance does not change the connected components. 
+                </li>
+                <li>
+                    Quick-union: select some edges that will form a forest (that is, collection of trees). Deletion of edge that do not form a forest won't change the connected components. 
+                </li>
+            </ul>
+            As compared to the naive algorithm of repeating the same algorithm (used for static setting), these algorithms managed to reduce the running time by 5000 times. 
+        </p>
+        <p>
+            The final part of my research concerns about making these algorithms work in parallel processing (that is, multitasking). 
+            After designing the algorithm on paper, I explored two technologies: OpenMP and Message Passing Interface (MPI). 
+            Under the advice of my supervisor, I chose to move on with MPI due to the private memory assigned to each processor (which makes it easier to scale to big numbers). 
+            In the end of my research, I constructed a framework of the algorithms aforementioned that conatains the idea behind it. 
+        </p>
+        <h3>
+            Dataset used: 5 graphs with up to 105 million vertices and up to 2.6 billion edges. 
+        </h3>
+        <h3>
+            Language: C++.
+        </h3>
+        <h3>
+            Proof of correctness: by comparing output with that produced by <a href="https://snap.stanford.edu/">Stanford Network Analysis Project (SNAP)</a>.
+        </h3>
+        <h3>
+            Skills gained: Linux, debugging, parallel processing. 
+        </h3>
+    </div="research">
 </body>
 </html>
