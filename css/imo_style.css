@@ -14,7 +14,7 @@ table, th, td, tr{
 
 div#drops {
     background-color: #4CAF50;
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
  /* Dropdown Button */

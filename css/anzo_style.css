@@ -8,7 +8,7 @@ body{
 
 div#drops {
     background-color: #4CAF50;
-    display: inline-block;
+    //display: inline-block;
 }
 
 
@@ -78,6 +78,7 @@ div#drops {
     display: none;
 }
 div#profpic{
+    
     border-radius:50px;
 }
 @media screen and (max-width: 600px){
@@ -86,4 +87,36 @@ div#profpic{
     }
 }
 
+@media screen and (max-width: 600px){
+    div#drops .responsive {
+            background-color: #4CAF50;
+            width: 140px;
+        }
+        .topnav.dropdown-content.responsive{
+            display: none;
+            position: absolute;
+            background-color: #4CAF50;/*background color of our dropdowns*/
+            min-width: 160px;
+        }
+
+        /* Dropdown Button */
+        .dropbtn.responsive {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .homeicon.responsive {
+            background-color: #4CAF50;
+            color: white;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 12px;
+            padding-right: 12px;
+            border: none;
+            cursor: pointer;
+        }
+}
  
