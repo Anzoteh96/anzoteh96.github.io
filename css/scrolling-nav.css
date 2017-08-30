@@ -1,0 +1,77 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    font-family: verdana, sans-serif;
+    width: 100%;
+}
+
+html {
+    width: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
+of those sections to manage the look and feel of the site. */
+
+.content-body {
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.intro-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.math-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.teach-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.write-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.code-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.music-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #eee;
+}
+
+.edu-section {
+    padding-top: 50px;
+    text-align: center;
+    background: #fff;
+}
