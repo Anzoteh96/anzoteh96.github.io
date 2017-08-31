@@ -1,21 +1,31 @@
 ﻿<!DOCTYPE html>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+        src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<link rel="stylesheet" href="css/imo_style.css" />
+<script src="anzo_jsfn.js"></script>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Anzo's Mathematics</title>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     <div class="topnav" id="drops" style="list-style-type:none">
         <!--no bullet-->
         <div class="dropdown">
-            <a href="index.html">
+            <a href="index.html" class="dropbtn">
                 <button class="homeicon">
                     <i class="fa fa-home fa-2x"></i>
                 </button>
             </a>
         </div>
         <div class="dropdown">
-            <a href="mathematics.html">
+            <a href="mathematics.html" class="dropbtn">
                 <button class="dropbtn">Mathematics</button>
             </a>
             <div class="dropdown-content">
@@ -27,7 +37,7 @@
             </div>
         </div>
         <div class="dropdown">
-            <a href="writings.html">
+            <a href="writings.html" class="dropbtn">
                 <button class="dropbtn">Writings</button>
             </a>
         </div>
