@@ -87,7 +87,7 @@ div#profpic{
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .topnav {display: none;}
   .icon{
       display: block;
@@ -97,7 +97,7 @@ div#profpic{
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 750px){
     .topnav.responsive .dropbtn {
         background-color: #4CAF50;
         padding: 4px;
