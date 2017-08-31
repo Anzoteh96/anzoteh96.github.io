@@ -38,7 +38,7 @@ div#drops {
     cursor: pointer;
 }
 
-.topnav .homeicon:hover{
+.topnav .dropdown:hover .homeicon {
     background-color: #3e8e41;
 }
 
@@ -131,6 +131,7 @@ div#drops {
 }
 
 .topnav.responsive .dropdown-content{
+    padding-left:20px;
     position: relative;
     display: block;
     color: white;

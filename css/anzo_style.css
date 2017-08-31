@@ -129,6 +129,7 @@ div#profpic{
 
 .topnav.responsive .dropdown-content{
     position: relative;
+    padding-left:20px;
     display: block;
     color: white;
     background-color: #4CAF50;/*background color of our dropdowns*/
@@ -144,7 +145,7 @@ div#profpic{
 
 
 .topnav.responsive .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #3e8341;
 }
 
 .topnav .responsive .dropdown:hover .homeicon{
