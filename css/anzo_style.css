@@ -1,3 +1,4 @@
+
 body{
     font-family: verdana, sans-serif;
     padding-left:3em;
@@ -81,9 +82,15 @@ div#profpic{
     
     border-radius:50px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
     .bigpic img{
         width:300px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .bigpic img{
+        width:200px;
     }
 }
 
@@ -159,4 +166,5 @@ div#profpic{
 .topnav.responsive .dropdown-content a:hover {
     background-color: #3e8e41;
 }
+
 }
