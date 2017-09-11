@@ -1,13 +1,18 @@
 
 body{
     font-family: verdana, sans-serif;
+    
+}
+
+#intro, #mathematics, #teaching, #writing, #coding, #music, #edu{
     padding-left:3em;
     padding-right:3em;
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
 }
 
 div#drops {
     background-color: #4CAF50;
+    //padding-left:3em;
     //display: inline-block;
 }
 
@@ -68,7 +73,7 @@ div#drops {
 
 /* Change color of dropdown links on hover */
 .topnav .dropdown-content a:hover {
-    background-color: #e5acac;
+    background-color: #00ffff;
 }
 
 

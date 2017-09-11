@@ -74,7 +74,7 @@ div#drops {
 
 /* Change color of dropdown links on hover */
 .topnav .dropdown-content a:hover {
-    background-color: #e5acac;
+    background-color: #00ffff;
 } 
 
 .icon{
@@ -82,6 +82,11 @@ div#drops {
     padding: 12px 16px;
     color: white;
     display: none;
+}
+
+.solution{
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 @media screen and (max-width: 700px){
