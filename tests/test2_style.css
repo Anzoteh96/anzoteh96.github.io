@@ -1,0 +1,153 @@
+﻿body{
+    font-family: verdana, sans-serif;
+    padding-left:3em;
+    padding-right:3em;
+    padding-bottom: 2em;
+}
+
+div#drops {
+    background-color: #4CAF50;
+    //display: inline-block;
+}
+
+ /* Dropdown Button */
+.topnav .dropbtn {
+    background-color: #4CAF50;
+    padding: 16px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .homeicon {
+    background-color: #4CAF50;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+/*content of our dropdown, hidden by default*/
+.topnav .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;/*background color of our dropdowns*/
+    min-width: 160px;
+}
+
+/*links inside the dropdown*/
+.topnav .dropdown-content a{
+    color:black;
+    padding: 12px 16px;/*padding so that our stuff appears correctly*/
+    text-decoration: none;
+    display: block;/*aligned*/
+}
+
+.topnav .dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.topnav .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.topnav .homeicon:hover{
+    background-color: #3e8e41;
+}
+
+/* Change color of dropdown links on hover */
+.topnav .dropdown-content a:hover {
+    background-color: #e5acac;
+}
+
+
+.icon{
+    background-color: #4CAF50;
+    padding: 12px 16px;
+    color: white;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {display: none;}
+  .icon{
+      display: block;
+  }
+  .topnav.responsive{
+      display: block;
+  }
+}
+
+@media screen and (max-width: 600px){
+    .topnav.responsive .dropbtn {
+        background-color: #4CAF50;
+        padding: 4px;
+        font-size: 16px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+    }
+
+    .topnav.responsive .homeicon {
+    background-color: #4CAF50;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+
+.topnav.responsive .dropdown{
+    position: relative;
+    display: block;
+}
+
+.topnav.responsive .dropdown-content{
+    position: relative;
+    display: block;
+    color: white;
+    background-color: #4CAF50;/*background color of our dropdowns*/
+    
+}
+    
+.topnav.responsive .dropdown-content a{
+    color:white;
+    padding: 8px 8px;/*padding so that our stuff appears correctly*/
+    text-decoration: none;
+    display: block;/*aligned*/
+}
+
+
+.topnav.responsive .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.topnav .responsive .dropdown:hover .homeicon{
+    background-color: #3e8e41;
+}
+.topnav.responsive .dropdown a:hover .homeicon{
+    background-color: #3e8e41;
+}
+
+/* Change color of dropdown links on hover */
+.topnav.responsive .dropdown-content a:hover {
+    background-color: #3e8e41;
+}
+}
+

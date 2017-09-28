@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Test 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Test </title>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    <div class="topnav" id="drops" style="list-style-type:none">
+        <!--no bullet-->
+        <div class="dropdown">
+            <a href="index.html">
+                <button class="homeicon">
+                    <i class="fa fa-home fa-2x"></i>
+                </button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="mathematics.html" class="dropbtn">
+                <button class="dropbtn">Mathematics</button>
+            </a>
+            <div class="dropdown-content">
+                <a href="imo_journey.html">IMO journey</a>
+                <a href="trigonometry.html">Trigonometry</a>
+                <a href="JOM 2013.html">JOM 2013</a>
+                <a href="jom_proposals.html">Problems creation</a>
+                <a href="trainer_diary.html">Trainer's diary</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="writings.html" class="dropbtn">
+                <button class="dropbtn">Writings</button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="coding.html" class="dropbtn">
+                <button class="dropbtn">Codings</button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="music.html" class="dropbtn">
+                <button class="dropbtn">Music</button>
+            </a>
+        </div>
+        
+    </div>
+    
+    <link rel="stylesheet" href="test2_style.css" />
+</head>
+<body>
+    ontheflooronthefloor
+</body>
+</html>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("drops");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+

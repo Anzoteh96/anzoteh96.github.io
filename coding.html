@@ -86,14 +86,64 @@
     </span>
     
     <span id="hackathon">
-        <h2>Hackathon Experience: Equithon 2017</h2>
-        <p>
-            On May 5-7, 2017, I participated in my first hackathon: the Equithon held at the University of Waterloo.
-            The problem that my teammates and I worked on was the fact that there were people with ideas and insights but do not have the skills to implement them.
-            On the other hand, there were also people with advanced skills in their related fields yet do not have the insights to see which problems to solve.
-            Hence we developed a website to connected the two types of people.
-        </p>
-        <h3>Languages: HTML, CSS, Javascript. </h3>
+        <h2>Hackathon Experience</h2>
+        <ol>
+            <li>
+                <h3>Trading Simulator, <a href="http://www.rbcroyalbank.com/personal.html">Royal Bank of Canada</a>(RBC)'s The Next Great Innovator Hackathon</h3>
+                <h4>Date: September 23-24, 2017</h4>
+                <p>
+                    My team agreed on building a <b>Trading Simulator</b> that opens to everyone to compete against RBC's trading strategy for the following two objectives:
+                    <ul>
+                        <li>To attract top performers into working in RBC and improve RBC's trading strategies. </li>
+                        <li>To improve the trading stragies of RBC through 'learning' from the top performers. </li>
+                    </ul>
+                    Our team comprised a Business Analyst, a UI Designer, and three developers (me included).
+                </p>
+                <p>
+                    In simulating the way in which an individual attempts to beat RBC by guessing the stock price at the next minute, a teammates posed me this question:
+                    <q>how do you predict the stock price at the next minute given the prices in the past? </q>
+                    After some comptemplation I noticed the similarity of this question to the classical problem of <a href="https://www.youtube.com/watch?v=LpjX3kHXcR0">finding the next number in a sequence</a>,
+                    which immediately prompted me to use the <a href="http://mathworld.wolfram.com/LagrangeInterpolatingPolynomial.html">Lagrange Interpolation Polynomial</a> to fit every point into a single polynomial.
+                    The problems associated to this formula are:
+                    <ul>
+                        <li>Inefficient running time due to the need of recalculation of the data for every single computation. </li>
+                        <li>Integer overflowing (even in Python) due to the multiplication of large number (say, hundreds or thousands) of variables. </li>
+                        <li>Huge deviation of the next predicted number from the numbers in the original sequence (due to the high power of the leading coefficient) that renders the prediction inaccurate. </li>
+                    </ul>
+                    I later learned that this problem is named <a href="https://en.wikipedia.org/wiki/Overfitting">overfitting</a>.
+                </p>
+                <p>
+                    In view of this I attempted the linear regression method: the results were getting better, but not quite there.
+                    Nonetheless, this motivated the approach of fitting a polynomial with degree depending on the number of points we had in the past.
+                    This was achieved by fitting the numbers into matrices in computing the coefficients of the resultant polynomial using numpy.linalg package.
+                    It's then found that an optimal way (using this approach and given the dataset) was to set the degree of polynomial at $O(\sqrt[3]{n})$ where $n$ is the number of points.
+                    This effectively capped my error at 4% in price prediction (around 1.5% on average).
+                </p>
+                <div align="center" class="bigpic">
+                    <figure>
+                        <img src="images/rbc_python.jpg" alt="Code Snippet" width="500" />
+                        <figcaption>A snippet of my Python code written for the regression calculation by storing the values of $\sum x^k$ and $\sum yx^m$. </figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Some other tasks I did during the Hackathon was to help debugging codes written by my teammates in Javascript, HTML and CSS (towards the deadline of the submission).
+                </p>
+                <h4>Languages: Python (numpy.linalg library), HTML, CSS, Javascript. </h4>
+                <h4>Skills gained: a preliminary idea on how machine learning works. </h4>
+            </li>
+            <li>
+                <h3>Idea Connector, Waterloo Equithon</h3>
+                <h4>May 5-7, 2017</h4>
+                <p>
+                    This was my first Hackathon experience.
+                    The problem that my teammates and I worked on was the fact that there were people with ideas and insights but do not have the skills to implement them.
+                    On the other hand, there were also people with advanced skills in their related fields yet do not have the insights to see which problems to solve.
+                    Hence we developed a website to connected the two types of people.
+                </p>
+                <h4>Languages: HTML, CSS, Javascript. </h4>
+                <h4>Benefit gained: a motivation to develop my own website here. </h4>
+            </li>
+        </ol>
     </span>
     
     
@@ -105,8 +155,7 @@
             My teammates and I decided to relate this data to the crime rate happening in the respective cities (using another dataset we searched on our own).
             Using statisical languages like R and Python, we drew a conclusion that public transportation is less perferred in areas with high crime rates.
         </p>
-        <h3>Languages: Python, R.</h3>
-        <h3>Technologies: Panda</h3>
+        <h3>Languages: Python (panda package), R.</h3>
     </span>
     
     <span id="research">
