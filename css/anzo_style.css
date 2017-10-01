@@ -99,6 +99,10 @@ div#profpic{
     }
 }
 
+button:focus {
+    outline:0;
+}
+
 .topnav {
     overflow: hidden;
 }
