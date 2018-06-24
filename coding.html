@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -65,29 +65,62 @@
         <div align="center" class="bigpic">
             <figure>
                 <img src="images/leetcode_rating.JPG" alt="leetcode" width="500" />
-                <figcaption>My Leetcode contest progress as of October 7, 2017. </figcaption>
+                <figcaption>My Leetcode contest progress as of February, 2018. </figcaption>
             </figure>
         </div>
+        <div align="center" class="bigpic">
+            <figure>
+                <img src="images/cf_rating.JPG" alt="codeforces" width="500" />
+                <figcaption>My Codeforces contest progress as of June, 2018. </figcaption>
+                </figure>
+        </div>
         <p>
-            Some of the awards I have won on the online programming platforms are:
+            Some of the awards I have won on the online or physical programming platforms are:
             <ul>
+                <li>USACO February 2018 Gold Division: Promoted to Platinum Division.</li>
+                <li>Communitech Code-and-Win Competition, January 2018:</li>
+                <ul>
+                    <li>Final Round: Rank 15/46, score 428/450.</li>
+                    <li>Preliminary Round: score 284/375 (threshold to advance: 185 points).</li>
+                </ul>
                 <li>HackerRank Week of Code 32: Gold medal (ranked 174/8433)</li>
                 <ul>
                     <li>Promoted to O(1) rating category (top 1% among all users)</li>
                 </ul>
                 <li>HackerRank Week of Code 24: Gold medal (ranked 189/9133)</li>
-                <li>LeetCode Weekly Contest 34: ranked 26/1557</li>
+                <li>LeetCode Weekly Contests:</li>
+                <ul>
+                    <li>Contest 70: ranked 29/2555.</li>
+                    <li>Contest 45: ranked 38/2292.</li>
+                    <li>Contest 43: ranked 78/2291.</li>
+                    <li>Contest 41: ranked 99/2174.</li>
+                    <li>Contest 34: ranked 26/1557.</li>
+                </ul>
                 <li>USACO December 2016: Perfect Score (Bronze and Silver Divisions)</li>
                 <ul>
                     <li>Promoted to Gold Division</li>
                 </ul>
             </ul>
+            It's worth noting that my ability to code has also won and team and me the second place at the Waterloo Google Games on April 28, 2018, during which I nailed down 5 algorithmic- (and math-) puzzles for my team, resulting in us solving 11 puzzles in total!
         </p>
     </span>
     
     <span id="hackathon">
         <h2>Hackathon Experience</h2>
         <ol>
+            <li>
+                <h3>LifeLog, the first UOttaHacks </h3>
+                <h4>Date: February 17-18. 2018</h4>
+                <p>On GitHub, developers can showcase their progress by commiting changes of their own files. Yet sometimes they prefer spending time to enrich themselves through reading articles related to their ongoing side projects, or merely for interest. Hence, it might be misleading for people to think that they do not contribute much, and are therefore non-productive during the period.
+                </p>
+                <p>We developed a web application so that developers (or any users) can 'commit' their readings onto LifeLog. To be precise:
+                    <ul>
+                        <li>People can commit an article they find interesting onto LifeLog.</li>
+                        <li>People can also highlight phrases they find interesting onto LifeLog. </li>
+                    </ul>
+                    My contribution to this application is the Chrome extension framework. To be precise, I started off by writing the manifest.js file (that is needed for most Chrome extension), before developing the main.js file by adding the chrome.addListener function: this allows the Chrome extension to send the commit to console log whenever a new article has been 'commited'.
+                </p>
+            </li>
             <li>
                 <h3>Trading Simulator, <a href="http://www.rbcroyalbank.com/personal.html">Royal Bank of Canada</a>(RBC)'s The Next Great Innovator Hackathon</h3>
                 <h4>Date: September 23-24, 2017</h4>
@@ -156,6 +189,36 @@
             Using statisical languages like R and Python, we drew a conclusion that public transportation is less perferred in areas with high crime rates.
         </p>
         <h3>Languages: Python (panda package), R.</h3>
+    </span>
+    
+    <span id="projects">
+    <h2>Projects</h2>
+    <ol>
+        <li><a href = "https://github.com/Anzoteh96/extended-number">The C++ Extended Integer System (Ongoing)</a></li>
+        <p>Inspired by the cyrptography research that I am undertaking in Summer 2018, I couldn't help but wonder: how to implement a system of numbers modulo n that provides a convenient method for addition, subtraction, multiplication and even integer division (inverse)? More generally, how can I implement features in C++ that offers cool mathematical things like what <a href = "http://www.sagemath.org:">SageMath.org</a> offers? Below are the framework I needed to do:
+        </p>
+        <ol>
+            <li>The BigInt system in C++.
+            </li>
+            <p>The int type in C++ allows 32-bits of integer storage while the long long int type allows 64-bits. In order for a sagemath simulating system to be efficient, we must have a system that stores way beyond the prescribed 64 bits for integers. The features currently supported are as of below:
+                <ul>
+                    <li>Basic arithmetic (addition, subtraction, multiplication, integer division and remainder).
+                    </li>
+                    <li>Comparison (greater or less than, equality).</li>
+                    <li>Bitwise shift (left shift << and right shift >>).</li>
+                </ul>
+            </p>
+            <li>Number modulo n.
+            </li>
+            <p>The arithmetic operations are the same as the BigInt system, but there are a few differences:
+                <ul>
+                    <li>Ordering and comparison no longer makes sense here. </li>
+                    <li>Division of integers can still return an integer without remainder provided that the divisor is relatively prime to n (for example, if n = 11 then 1/5=6). </li>
+                    <li>Fast exponentiation can be done, i.e. the result of $k^m$ mod n can be found in polynomial time in log k, m and n. </li>
+                </ul>
+            </p>
+        </ol>
+    </ol>
     </span>
     
     <span id="research">
