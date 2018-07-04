@@ -182,6 +182,19 @@
                 </ul>
             </p>
         </ol>
+        <p>The main challenge of this project is to optimize my library to the maximum possible while keeping the object-oriented development principle (single-responsibility principle, minimize coupling between modules, etc). In the very beginning, it takes 5 seconds to read, output, and perform all arithmetic operations on two 300-digit integers, and modular exponentiation seemed infeasible. Below is my journey to optimization in bringing 5 seconds to 0.016 seconds (300 times!) and modular arithmetic of 60-digit numbers from 232 seconds to 0.175 seconds (1000+ times!):
+        </p>
+        <ol>
+            <li>By avoiding unnecessary recursion and recalculation in reading input (conversion from base 10 to base 2), which allowed my algorithm to go down to 2 seconds from 5. </li>
+            <li>By decapsulating my objects when doing arithmetic operations (i.e. perform arithmetic on vectors instead of doing them repeatedly on BigInt to avoid unncessary constructor and destructor running) I successfully brought it down from 2 seconds to 0.37 seconds.
+            </li>
+            <li>Previously, modular exponentiation is still very slow: doing it for two 10-digit numbers takes more than 15 seconds. I brought this to around 2 seconds by simply decapsulating division and remainder process.</li>
+            <li>Compiling with the O2 flag (optimization) made all process above finish executing in one-third of original time. </li>
+            <li>Previously, my Karatsuba's algorithm involves creating new smaller vectors and perform recursion from there. By avoiding copying and performing recursion on a segment of the original vector instead, I gained 1/3 speedup overall.
+            </li>
+            <li>Finally, changing from Karatsuba's algorithm to Fast Fourier transform allows a whooping 5 to 6 times optimization on modular arithmetic of two 300-digit numbers modulo another 300-digit number. It also gives almost 3 times speedup on ordinary arithmetics. </li>
+        </ol>
+        
     </ol>
     </span>
     
