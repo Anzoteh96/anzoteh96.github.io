@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+<script type="text/javascript" async
+    src="https://example.com/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <link rel="stylesheet" href="css/imo_style.css" />
+    <script src="anzo_jsfn.js"></script>
+    
+    <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Anzo's Mathematics</title>
+    <body ng-app="">
+    
+    <div ng-include="'myheader.html'"></div>
+    
+    </body>
+    <h1 style="text-align: center;background-color:lightblue;">Anzo's Mathematics</h1>
+    </head>
+    <link rel="stylesheet" href="css/imo_style.css" />
+    
+<body>
+<h1>Background</h1>
+
+I first came across this opportunity in December 2016, when I saw a poster about the <a href = "https://uwaterloo.ca/combinatorics-and-optimization/undergraduates/undergraduate-research">Spring 2017 Research Assistantship in the Combinatorics and Optimization department</a>. Though I was not qualified to apply as a first year student back then, I kept this in mind and started applying in November 2017 for the Spring 2018 opportunity, in the hope that I can work with Professor <a href = "https://uwaterloo.ca/global-impact/meet-man-protecting-your-secrets">David Jao</a> in the area of cryptography and number theory. I submitted my application in December, and got the offer letter from the department the working day after the application closed.
+
+<h1>The First Weeks</h1>
+I moved into my research office knowing only the <a href = "">RSA</a> algorithm, and picked up the following algorithms under Jao's guidance:
+<div ng-app="" ng-init=
+"names=[{name:'Diffie Hellman (DH)', quan: 'not post-quantum secure'},
+{name:'Elliptic Curve Cryptography (ECC)', quan: 'not post-quantum secure'},
+    {name:'ElGamal encryption', quan:'not post-quantum secure'},
+    {name: 'Supersingular Isogeny Diffie Hellman (SIDH)', quan: 'post-quantum Secure, quantum attack time complexity $O(p^{\\frac{1}{6}})$'}
+    ]">
+    
+<ul>
+<li ng-repeat="x in names">
+{{ x.name + ' (' + x.quan + ')' }}
+    </li>
+    </ul>
+    </div>
+    The SIDH scheme was co-invented by Jao himself in 2011, which is based on the following background knowledge:
+    <div ng-app="" ng-init=
+    "names2=[
+    {name:'Elliptic Curve', expl: 'a curve on the x-y plane that has the equation $y^2=x^3+ax+b$, with addition of points defined and forms a group'},
+    {name:'j-invariant', expl: 'The quantity $1728\\times\\frac{4a^3}{4a^3 + 27b^2}$ of a curve'},
+    {name:'Elliptic Curve Isogeny', expl:'A rational map $\\phi$ bringing a points of an elliptic curve to another that is also a homomorphism'},
+    {name: 'Finite Field', expl: 'Elements in a set of $p^k$ elements for some prime $p$, and that addition, subtraction, multiplication, and nonzero division are defined and commutative, and that $p\\times a=0$ for all $a$ in the field'},
+    {name: 'Endomorphism ring', expl: 'The set of elliptic curve isogeny such that the image points are on the same elliptic curve'},
+    {name: 'Supersingular curve', expl: 'Those curves over a finite field such that the endomorphism ring is isomorphic to some maximal order in some quaternion algebra'}
+    ]">
+    
+    <ul>
+    <li ng-repeat="x in names2">
+    {{ x.name + ': ' + x.expl }}
+    </li>
+    </ul>
+    </div>
+
+</body>
+</html>
