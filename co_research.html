@@ -35,7 +35,7 @@ I moved into my research office knowing only the <a href = "">RSA</a> algorithm,
 "names=[{name:'Diffie Hellman (DH)', quan: 'not post-quantum secure'},
 {name:'Elliptic Curve Cryptography (ECC)', quan: 'not post-quantum secure'},
     {name:'ElGamal encryption', quan:'not post-quantum secure'},
-    {name: 'Supersingular Isogeny Diffie Hellman (SIDH)', quan: 'post-quantum Secure, quantum attack time complexity $O(p^{\\frac{1}{6}})$'}
+    {name: 'Supersingular Isogeny Diffie Hellman (SIDH)', quan: 'post-quantum secure, quantum attack time complexity $O(p^{\\frac{1}{6}})$'}
     ]">
     
 <ul>
@@ -61,6 +61,68 @@ I moved into my research office knowing only the <a href = "">RSA</a> algorithm,
     </li>
     </ul>
     </div>
+    <p>
+    The Diffie Hellman algorithm involves two parties encrypting their own secret key and exchange with each other, and the encryption of the exchanged message will be the shared secret between the two parties.
+    </p>
+    <p>
+    Another metric vital in cryptography is the security level, where a security level of $n$ implies that an average of $2^n$ operations are required to decrypt an encryption using the most efficient known decryption algorithm. As a rule of thumb, any cryptography algorithm with at least 128 bits of security level is considered secure. (There is a fun avtivity below, where you can enter a number and it will show the number of digits it has).
+    </p>
+    
+    <div ng-app="my-app">
+    <form>
+    Security level: <input type="number" ng-model="securityLevel">
+    </form>
+    <p>The security level you entered has {{securityLevel/3.32192809489 + 0.5| number:0}} digits!</p>
+    </div>
+
+    
+    <h1>Exploring Recent Works</h1>
+    <p>There have been several papers that is based on the work of SIDH, including the key compression in isogeny and the newly minted CSIDH (it is not clear what does 'C' stand for, but it is conjectured that it means 'Commutative'). We also started looking into various signature schemes, which involves protocols like hashing (using the theory of random oracle), Fiat Shamir and Unruh transformations.
+    </p>
+    <h2>A Detour Into Class Group and Binary Quadratic Form
+    </h2>
+    <p>
+    The commutativity of the CSIDH scheme is based on the fact that the endomorphism ring of ordinary elliptic curve is an order of the quadratic field. It therefore uses the theory of class group extensively (since the elliptic curve and its isogeny are modelled in terms of class group action). This necessitates the need of studying class group of imaginary quadratic fields. It is interesting to note the bijection between a class group and a reduced binary quadratic form of the same discriminant $D$ (to be precise, it is the bijection between $ax^2+bxy+cy^2$ and $(a, \frac{-b+\sqrt{D}}{2})$), with $D$ being negative.
+    </p>
+    <h2>
+    Diving into Quaternion Algebra
+    </h2>
+    <p>
+    It is difficult to imagine, but in understanding the endomorphism ring structure of a supersingular curve we landed on an abstract algebra object where multiplication is non commutative. It consists of vectors $1, i, j, k$ over a field $\mathbb{F}$, and two element $a, b$ in $\mathbb{F}$ with multiplication defined as $i^2=a, j^2=b$ and $ij=-ji=k$ (anticommutative). Below are the related things I have studied:
+    <div ng-app="" ng-init="names3=[
+    {name: 'Isomorphism between two quaternion algebra'},
+    {name: 'Whether a quaternion algebra is a division ring'},
+    {name: 'Isomorphism between a quaternion algebra and a $2\\times 2$ matrix (in case it is not a division ring)'},
+    {name: 'Parallels between quaternion algebra and qudratic field, real and imaginary'}
+    ]"
+    >
+    <ul>
+    <li ng-repeat="x in names3">
+    {{ x.name }}
+    </li>
+    </ul>
+    </div>
+    Focusing on the case where the prime $p$ is congruent to 3 modulo 4, the unique quaternion algebra (up to isomorphism) that is ramified exactly at infinity and $p$ is the one when $i^2=-1$ and $k^2=-p$. It turns out that any supersingular curve over any extension of $\mathbb{F}_p$ is an order of this quaternion algebra.
+    </p>
+    
+    <h1>Finding Focus and Contribution</h1>
+    Jao shared to me a paper by Galbraith et al on a signature scheme based on endomorphism ring computation, which relies on properties of quaternion algebra to find a new isogeny path that fulfills the signature requirement without revealing the secret to the prover (that is, the path of isogeny that brings the starting curve to the ending curve). While I tried to think of ways to incorporate this scheme into other existing signature schemes to make it more secure, Jao recommended me to implement the scheme in SageMath.org instead. This starts my journey of experimenting some auxillary functions to make them work, with the following auxillary functions required.
+    
+    <h2>Sum of Two Squares</h2>
+    <p>This works for all primes in the form $4k+1$ and this prime number multiplied by any power of two (e.g. 1, 2, 4, 5, 8, 10, 13, 16, 17, etc). I followed the algorithm given in Wikipedia for my implementation in Sage (there are other examples of numbers that can be written as sum of two squares, but these set of numbers make it computaitonally practical to actually determine the sum of two squares).</p>
+    
+    <h2>Norm Fitting</h2>
+    <p>Finding an element of suitable norm involves solving equation like $a^2+b^2+p(c^2+d^2)=N$, which reduces to randomly finding $c, d$ such that $N-p(c^2+d^2)$ is in the desirable form for the sum-of-two-squares algorithm.
+    </p>
+    
+    <h2>Point Multiplication</h2>
+    <p>Although it is straightforward to multiply a point on the elliptic curve by an integer, this is not true in the case of multiplication of points with elements in quaternion algebra. To visualize what the multiplication of $i$ and $j$ actually means (and using the fact that $ij=k$ for multiplication by $k$), we need to first realize that $i^2=-1$ and $j^2=-p$. This necessitates the finding of endomorphisms $\phi$ and $\pi$ such that $\phi^2=-1$ and $\pi^2=-p$. It is well-known that we can take $\pi$ as the <a href="https://en.wikipedia.org/wiki/Frobenius_endomorphism">Frobenius endomorphism</a>; the case for $\phi$ is less obvious. Luckily, we start at a curve $y^2=x^3+x$ where it is straightforward that we can let $\phi$ to map $(x, y)$ to $(-x, iy)$.
+    </p>
+    
+    <h1>The Process of Writing the Code</h1>
+    (To be continued)
+
 
 </body>
 </html>
+

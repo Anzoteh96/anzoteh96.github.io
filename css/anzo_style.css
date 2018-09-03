@@ -103,10 +103,6 @@ button:focus {
     outline:0;
 }
 
-.topnav {
-    overflow: hidden;
-}
-
 @media screen and (max-width: 750px) {
   .topnav {display: none;}
   .icon{
