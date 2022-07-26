@@ -12,9 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codings</title>
         <body ng-app="">
-    
+
             <div ng-include="'myheader.html'"></div>
-    
+
         </body>
     <h1>My Coding Experience</h1>
 </head>
@@ -26,16 +26,18 @@
             My primary language is C++ (although I started picking up Python 2 recently for Datathon purposes).
             The collection of cool problems I have solved can be found <a href="https://github.com/Anzoteh96/Cpp-algorithms">here</a>.
         </p>
+        <!--
         <div align="center" class="bigpic">
             <figure>
                 <img src="images/leetcode_rating.JPG" alt="leetcode" width="500" />
                 <figcaption>My Leetcode contest progress as of February, 2018. </figcaption>
             </figure>
         </div>
+      -->
         <div align="center" class="bigpic">
             <figure>
                 <img src="images/cf_rating.JPG" alt="codeforces" width="500" />
-                <figcaption>My Codeforces contest progress as of August, 2018. </figcaption>
+                <figcaption>Reached <i>Master</i> (ratings 2100) on Codeforces in August 2019! </figcaption>
                 </figure>
         </div>
         <p>
@@ -68,7 +70,7 @@
             It's worth noting that my ability to code has also won and team and me the second place at the Waterloo Google Games on April 28, 2018, during which I nailed down 5 algorithmic- (and math-) puzzles for my team, resulting in us solving 11 puzzles in total!
         </p>
     </span>
-    
+
     <span id="hackathon">
         <h2>Hackathon Experience</h2>
         <ol>
@@ -142,8 +144,8 @@
             </li>
         </ol>
     </span>
-    
-    
+
+
     <span id="datathon">
         <h2>Datathon Experience: Waterloo Datathon 2017</h2>
         <p>
@@ -154,7 +156,7 @@
         </p>
         <h3>Languages: Python (panda package), R.</h3>
     </span>
-    
+
     <span id="projects">
     <h2>Projects</h2>
     <ol>
@@ -194,10 +196,10 @@
             </li>
             <li>Finally, changing from Karatsuba's algorithm to Fast Fourier transform allows a whooping 5 to 6 times optimization on modular arithmetic of two 300-digit numbers modulo another 300-digit number. It also gives almost 3 times speedup on ordinary arithmetics. </li>
         </ol>
-        
+
     </ol>
     </span>
-    
+
     <span id="research">
         <h2>Research Experience</h2>
         <p>
@@ -212,26 +214,26 @@
             most (if not all) of them cannot update the set of connected components efficiently in the case of edge deletion.
         </p>
         <p>
-            A crucial observation in solving this mega-problem is that, in general, the probability of a connected component being split into two upon edge deletion is rather small. 
+            A crucial observation in solving this mega-problem is that, in general, the probability of a connected component being split into two upon edge deletion is rather small.
             Having this in mind, and having familiarized myself with the existing algorithms in a static setting, I started off by modifying the features of the existing algorithms:
             <ul>
                 <li>
-                    Breadth-first search: record the distance of each vertex from a selected vertex of its component. Deletion of an edge joining vertices of the same distance does not change the connected components. 
+                    Breadth-first search: record the distance of each vertex from a selected vertex of its component. Deletion of an edge joining vertices of the same distance does not change the connected components.
                 </li>
                 <li>
-                    Quick-union: select some edges that will form a forest (that is, collection of trees). Deletion of edge that do not form a forest won't change the connected components. 
+                    Quick-union: select some edges that will form a forest (that is, collection of trees). Deletion of edge that do not form a forest won't change the connected components.
                 </li>
             </ul>
-            As compared to the naive algorithm of repeating the same algorithm (used for static setting), these algorithms managed to reduce the running time by 5000 times. 
+            As compared to the naive algorithm of repeating the same algorithm (used for static setting), these algorithms managed to reduce the running time by 5000 times.
         </p>
         <p>
-            The final part of my research concerns about making these algorithms work in parallel processing (that is, multitasking). 
-            After designing the algorithm on paper, I explored two technologies: OpenMP and Message Passing Interface (MPI). 
-            Under the advice of my supervisor, I chose to move on with MPI due to the private memory assigned to each processor (which makes it easier to scale to big numbers). 
-            In the end of my research, I constructed a framework of the algorithms aforementioned that conatains the idea behind it. 
+            The final part of my research concerns about making these algorithms work in parallel processing (that is, multitasking).
+            After designing the algorithm on paper, I explored two technologies: OpenMP and Message Passing Interface (MPI).
+            Under the advice of my supervisor, I chose to move on with MPI due to the private memory assigned to each processor (which makes it easier to scale to big numbers).
+            In the end of my research, I constructed a framework of the algorithms aforementioned that conatains the idea behind it.
         </p>
         <h3>
-            Dataset used: 5 graphs with up to 105 million vertices and up to 2.6 billion edges. 
+            Dataset used: 5 graphs with up to 105 million vertices and up to 2.6 billion edges.
         </h3>
         <h3>
             Language: C++.
@@ -240,7 +242,7 @@
             Proof of correctness: by comparing output with that produced by <a href="https://snap.stanford.edu/">Stanford Network Analysis Project (SNAP)</a>.
         </h3>
         <h3>
-            Skills gained: Linux, debugging, parallel processing. 
+            Skills gained: Linux, debugging, parallel processing.
         </h3>
     </span id="research">
 </body>
